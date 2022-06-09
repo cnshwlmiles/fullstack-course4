@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .parallax {
+      /* The image used */
+      background-image: url("https://images.unsplash.com/photo-1541336528065-8f1fdc435835?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    
+      /* Set a specific height */
+      width: 100vw;
+      height: 100vh;
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    body{
+       margin: 0px;
+       width: 100vw;
+       height: 100vh;
+       background:white;
+       /* border:1px solid black;  */
+       position: relative;
+        /* 可視範圍內寬度 */
+       } 
+   #icon{
+       width: 200px;
+       height: 50px;
+       background-color:lightskyblue;
+       /* border:1px dashed black; */
+       /* margin-left: auto; 
+       margin-right: auto; */
+       position: absolute;
+       left: calc(50% - 100px);
+       top: calc(50% - 25px);      
+   }
+   #iconWord{       
+       font-size: 25px;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bold;
+       text-align: center;
+       line-height: 50px;       
+       letter-spacing: 3px;
+   }
+   #DEMO{
+       width:calc(100vw - 40px);
+       background-color:lightskyblue;
+       padding:20px; 
+   }
+   #DEMO-title{       
+       font-size: 25px;
+       font-family: 'Gill Sans';
+       font-weight: bold;
+       text-align: center;
+       line-height: 50px;       
+       letter-spacing: 3px;
+   }
+   #DEMO-content{       
+       width: 80vw;
+       /* height: 200px; */
+       margin-bottom: 30px;
+       margin-left: auto;
+       margin-right: auto;
+       font-size: 14px;
+       font-family:'Gill Sans';
+       font-weight: 500;
+       text-align: left;      
+   }
+   .parallax2{
+    background-image: url("https://images.unsplash.com/photo-1517783999520-f068d7431a60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    width: 100vw;
+    height: 60vh;  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+   }  
+   #icon2{
+       width: 300px;
+       height: 50px;
+       position: absolute;
+       left: calc(50% - 150px);
+       top: calc(50% - 25px);  
+   }
+   #iconWord2{       
+       font-size: 30px;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bold;
+       color: snow;
+       text-align: center;
+       line-height: 50px;       
+       letter-spacing: 3px;
+   }
+   #part2{
+       width: 100vw;
+       height: 150px;
+       background-color:slategrey;
+       position: relative;      
+   }
+   #part2-content{       
+       width: 200px;
+       height: 50 px;       
+       font-weight: 500;
+       text-align: middle;       
+       position: absolute;
+       left:calc(50% - 100px);
+       top:calc(50% - 25px); 
+   }
+   .parallax3{
+    background-image: url("https://images.unsplash.com/photo-1517784120905-d9f8d5aced1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    width: 100vw;
+    height: 60vh;  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+   }  
+   #icon3{
+       width: 300px;
+       height: 50px;
+       /* background-color:lightskyblue; */
+       position: absolute;
+       left: calc(50% - 150px);
+       top: calc(50% - 25px);  
+   }
+   #iconWord3{       
+       font-size: 25px;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bold;
+       color: snow;
+       text-align: center;
+       line-height: 50px;       
+       letter-spacing: 3px;
+   }
+ #part3{
+       width: 100vw;
+       height: 150px;
+       background-color:slategrey;
+       position: relative;      
+   }
+ #part3-content{       
+       width: 200px;
+       height: 50 px;       
+       font-weight: 500;
+       text-align: middle;       
+       position: absolute;
+       left:calc(50% - 100px);
+       top:calc(50% - 25px); 
+   }
+   .parallax4 {    
+      background-image: url("https://images.unsplash.com/photo-1541336528065-8f1fdc435835?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+      width: 100vw;
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;     
+    }
+   #icon4{
+       width: 200px;
+       height: 50px;
+       background-color:gray;
+       border:1px solid white;
+       position: absolute;
+       left: calc(50% - 100px);
+       top: calc(50% - 25px);      
+   }
+   #iconWord4{       
+       font-size: 25px;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bold;
+       text-align: center;
+       line-height: 50px;       
+       letter-spacing: 3px;
+   }
+    </style>
+    
+   
+</head>
+<body>
+    <!-- Container element --> 
+    <!-- 第一頁 --> 
+    <div class="parallax">
+        <div id="icon">
+            <div id="iconWord">Penguin</div>
+        </div>
+    </div>    
+    <!-- 第二部分 PARALLAX DEMO --> 
+    <div id="DEMO">
+        <div id="DEMO-title">Penguin</div>
+        <div id="DEMO-content">Penguins (order Sphenisciformes, family Spheniscidae) are a group of aquatic flightless birds. They live almost exclusively in the Southern Hemisphere, with only one species, the Galápagos penguin, found north of the equator. 
+            Highly adapted for life in the water, penguins have countershaded dark and white plumage and flippers for swimming. 
+            Most penguins feed on krill, fish, squid and other forms of sea life which they catch while swimming underwater. 
+            They spend roughly half of their lives on land and the other half in the sea.
+            Although almost all penguin species are native to the Southern Hemisphere, they are not found only in cold climates, such as Antarctica. In fact, only a few species of penguin live so far south. Several species are found in the temperate zone, but one species, the Galápagos penguin, lives near the equator.
+         </div>
+    </div>
+    
+    <!-- 第三部分 PARALLAX DEMO --> 
+    <div class="parallax2">
+        <div id="icon2">
+            <div id="iconWord2">Another Penguin</div>
+          </div>
+    </div>
+    <div id="part2">
+        <div id="part2-content">往上往下滑看更多企鵝</div>     
+    </div>   
+    
+    <!-- 第四部分 PARALLAX DEMO --> 
+    <div class="parallax3">
+        <div id="icon3">
+            <div id="iconWord3">More Penguins</div>
+        </div>
+    </div>
+    <div id="part3">
+        <div id="part3-content">往上往下滑看更多企鵝</div>     
+    </div> 
+    <!-- 第五部分 --> 
+    <div class="parallax4">
+        <div id="icon4">
+            <div id="iconWord4">企鵝</div>
+       </div>
+    </div>
+    
+
+  
+     
+</body>
+</html>

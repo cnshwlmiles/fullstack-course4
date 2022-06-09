@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 大小駝峰命名法：兩單字合在一起，第一個字母大寫ApplePen
+    1. Nav區塊
+    2. 主要(main)區塊(banner+導覽按鈕+大頭照)
+    */
+    body{ margin:0  }
+      #bluebar{
+      width: 100%; 
+      height: 43px;
+      background-color:blue; 
+      margin-right: 10px;
+      }     
+      #profile{
+      width: 60%; 
+      height: 248px;
+      background-color:crimson;       
+      margin-left: auto; 
+      margin-right: auto;
+       /*置中  */
+      position: relative; 
+      /* 參考位置 */
+      } 
+      #profile_pic{
+      width: 160px; 
+      height: 160px;
+      border-radius: 50%;   
+      border: 5px solid white;
+      /* 變圓和加邊框 */
+      background-color:aquamarine; 
+      background-position:top; 
+      background-image: url("data:image/jpeg;base64,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");     
+      background-size: cover;
+      float: left;     
+      position: absolute;
+      /* 距離邊邊的絕對位置 */
+      bottom: 20px;
+      left: 20px;
+      }
+      #button{
+      width: 80px; 
+      height: 30px;
+      border-radius: 5px;
+      border: 2px solid white; 
+      background-color:aquamarine; 
+      background-position:top;
+      background-size: cover;
+      float: right;     
+      position: absolute;
+      /* 距離邊邊的絕對位置 */
+      bottom: 56px;
+      right: 60px;
+      }
+      #contain-U{
+      width: 100%; 
+      height: 205px;
+      background-color:blueviolet;       
+      margin-left: auto;
+      margin-right: auto;      
+      }
+      #contain-D{
+      width: 100%; 
+      height: 43px;
+      background-color:rgb(236, 196, 17);        
+      margin-left: auto;
+      margin-right: auto; 
+      }
+      #edit{
+      width: 80px; 
+      height: 30px;
+      position: absolute; 
+      bottom: 56px;
+      right: 60px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: bold;
+      font-size:10pt;
+      text-align: center;
+      }
+      
+      
+  </style>
+   <div> <!-- #all>#header+(#contain>...)+...-->
+    <div id="all">
+      <div id="bluebar"></div>
+      <div id="profile">
+        <div id="profile_pic"></div>
+        <div id="button"></div>
+        <div id="contain-U"></div>
+        <div id="contain-D"></div>
+        <div id="edit">編輯個人檔案</div>
+      </div>      
+    </div>
+  </div>
+</head>
+<body>
+  
+</body>
+</html>

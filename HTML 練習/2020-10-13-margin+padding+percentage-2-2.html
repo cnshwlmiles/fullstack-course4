@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin:0
+      /* 註解快捷鍵使用方式：ctrl + / */  
+    }
+    #all{
+      width: calc(70% - 20px); 
+      height: 800px;
+      background-color:black;
+      padding: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      }
+      #header{
+      width: 100%; 
+      height: 150px;
+      background-color:lightgreen; 
+      margin-right: 10px;
+      }
+      #contain{
+      width: 100%; 
+      height: 440px;
+      background-color:black;        
+      margin-top: 10px;     
+      }
+      #contain-L{
+      width:calc(34% - 10px); 
+      height: 440px;
+      background-color:crimson;       
+      float:left;
+      margin-right:10px         
+      }
+      #contain-R{
+      width: 66%; 
+      height: 440px;
+      background-color:rgb(236, 196, 17);        
+      float:left  
+      }
+      #footer{
+      width: 100%; 
+      height: 190px;
+      background-color:darkturquoise;
+      margin-top: 10px;  
+      }
+  </style>
+   <div> <!-- #all>#header+(#contain>...)+...-->
+    <div id="all">
+      <div id="header"></div>
+      <div id="contain">
+        <div id="contain-L"></div>
+        <div id="contain-R"></div>
+      </div>
+      <div id="footer"></div>
+    </div>
+  </div>
+</head>
+<body>
+  
+</body>
+</html>

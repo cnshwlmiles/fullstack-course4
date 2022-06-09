@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body{
+       margin: 0px;
+       width: 100vw;
+       height: 100vh;
+       background:white;
+       border:1px solid black;
+       position: relative;
+        /* 可視範圍內寬度 */
+       } 
+   #icon{
+       width: 200px;
+       height: 50px;
+       background-color:lightskyblue;
+       border:1px solid #EFBB24;
+       /* margin-left: auto; 
+       margin-right: auto; */
+       position: absolute;
+       left: calc(50% - 100px);
+       top: calc(50% - 25px);      
+   }
+   #iconWord{       
+       font-size: 20px;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-weight: 900;
+       text-align: center;
+       line-height: 50px;
+       /* 行高 */
+       letter-spacing: 3px;
+   }
+ 
+</style>
+
+
+<body>
+    <div>
+        <div id="div0">
+            <div id="icon">
+                <div id="iconWord">我是會浮動的標題</div>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>

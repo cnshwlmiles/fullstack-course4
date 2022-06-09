@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin:0
+    }
+    #contain{
+      width: calc(80% - 20px); 
+      height: 300px;
+      background-color:black;
+      padding: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      }
+      #contain-1{
+      width: 33%; 
+      height: 300px;
+      background-color:lightgreen; 
+      float: left;
+      margin-right: 10px;
+      }
+      #contain-2{
+      width: calc(34% - 10px); 
+      height: 300px;
+      background-color:lightpink; 
+      float: left;
+      margin-right: 10px;      
+      }
+      #contain-3{
+      width: calc(33% - 10px); 
+      height: 300px;
+      background-color:darkturquoise; 
+      float: left;
+      }
+  </style>
+  <div>
+  <!--#contain>#contain-1+#contain-2+#contain-3-->
+  <div id="contain">
+    <div id="contain-1"></div>
+    <div id="contain-2"></div>
+    <div id="contain-3"></div>
+  </div>
+
+  </div>
+</head>
+<body>
+  
+</body>
+</html>

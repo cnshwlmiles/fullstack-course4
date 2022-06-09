@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><!--語言-->
+<head>
+    <meta charset="UTF-8">
+    <!--編碼為萬國編碼-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--視埠、可以符合所有視窗大小-->
+    <title>Document</title>
+    <style>
+div{background-color: cornflowerblue;} 
+    #BoxA{width: 50px; <!--對三個箱子分開-->
+      height: 50px;
+      background-color:red; float: left; <!-浮動往左靠-->
+      }
+    #BoxB{width: 100px;
+      height: 100px;
+      background-color:orangered; clear: left; <!--清除往左靠-->
+      }
+    #BoxC{width: 150px;
+      height: 150px;
+      background-color:yellow; float: right;
+      }      
+    </style><!--針對div調整，不要在裡面設定-->
+</head>
+<body>
+    <div id="BoxA">1</div><!--打div*3按tab就可以自動完成，打#BOXa自動完成-->
+    <div id="BoxB">2</div>
+    <div id="BoxC">3</div>
+</body>
+</html>

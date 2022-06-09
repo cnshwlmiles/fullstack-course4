@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    font-family: 'commissioner', sans-serif;
+}
+#bg-1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://www.w3schools.com/howto/img_parallax.jpg);
+    background-position: center;
+    background-size: cover;    
+    position: relative;
+    /* 灰灰的效果 */
+    /* opacity: 0.6; */
+   /* 加上下面這句就可以固定圖片了 */
+    background-attachment: fixed;
+    
+}
+#black-box{
+    width: 330px;
+    height: 65px;
+    background-color: #666;  
+    /* 簡寫 #111=#111111 #123=112233 */
+    color: #FFF;
+    font-size: 25px;
+    /* font-family: 'commisioner', sans-serif; */
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 400;
+    /* 定位(要計算) */
+    /* position: absolute;
+    top: calc(50% - 33px);
+    left: calc(50% - 165px); */
+    /* 定位(不用計算的transform) 
+    https://www.wibibi.com/info.php?tid=CSS3_transform_%E5%B1%AC%E6%80%A7*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+      /*translate寬高是物件本身 */
+    transform: translate(-50%,-30%);
+    /* 設定一個黑色遮罩 */
+}    
+#mask{ 
+    width: 100%;
+    height: 100vh;
+    background-color: #999;
+    opacity: 0.3;
+}
+#bg-2{
+    width: calc(100%-100px);
+    height: auto;
+    /* padding 上下 左右 */
+    padding:50px 80px;
+}
+h2{
+    font-size: 20px;
+    text-align: center;   
+}
+p{
+    font-size: 15px;
+    /* 左右對齊的文字 */
+    text-align: justify;   
+    color: #666;
+}

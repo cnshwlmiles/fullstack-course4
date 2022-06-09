@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 56px;
+}
+main{
+    background-color: chartreuse;
+    height: 1000px;
+    display: flex;
+}
+.container{
+    display: flex;
+}
+
+footer{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color:black;
+    }
+    #all{
+        width: 600px;
+        height: 800px;
+        background-color:black;
+        margin-left: auto; 
+        margin-right: auto;
+        } 
+      #header{
+        width: 600px;
+        height: 150px;
+        background-color:gold; 
+        } 
+      #content{
+        width: 600px;
+        height: 450px;
+        background-color:lightblue; 
+        }
+        #content-L{
+        width: 200px;
+        height: 450px;
+        background-color:lightblue; 
+        float: left;
+        }
+        #content-R{
+        width: 400px;
+        height: 450px;
+        background-color:green; 
+        float: left;
+        }
+          #content-R01{
+        width: 400px;
+        height: 150px;
+        background-color:lightgray; 
+        }
+        #content-R02{
+        width: 400px;
+        height: 150px;
+        background-color:gray; 
+        }
+        #content-R03{
+        width: 400px;
+        height: 150px;
+        background-color:lightgray; 
+        }
+      #footer{
+        width: 600px;
+        height: 200px;
+        background-color:palevioletred; 
+        }  
+
+  </style> <!--Style另外設定，不要設定在div裡-->
+  <!--一行切割很多區塊的語法：#all>#header+(#content>#content-L+#content-R)+#Footer-->
+  <div id="all">
+    <div id="header"> 
+    </div>
+    <div id="content">
+      <div id="content-L"></div>
+      <div id="content-R">
+        <div id="content-R01"></div>
+        <div id="content-R02"></div>
+        <div id="content-R03"></div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+</head>
+<body>
+</body>
+</html>
