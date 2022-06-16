@@ -1,0 +1,35 @@
+<!-- ! + tab 快速產生網頁 -->
+<!-- 縮寫用 < -->
+<!DOCTYPE html>
+<!-- 縮寫用doc -->
+<!-- HTML Content Model模型分為 
+    Block-Level Elements (會換行)
+和 inLine Element  -->
+
+<!-- 
+div : 簡單的說就是一個區塊，我們會在裡面塞很多很多東西。
+span :通常會用來做區塊或者是標籤內的細部變化
+ -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div and span elements</title>
+</head>
+<body>
+    <div>*** DIV 1: Some content here ***</div>
+    <div>*** DIV 2: Following right after div 1 ***</div>
+    <span>*** SPAN 1: Following right after div 2 ***</span>
+    <!-- 不管怎樣div區塊會開啟一個新的區塊 -->
+    <div>
+      *** DIV 3: Following right after span 1 
+      <span>*** SPAN 2: INSIDE div 3 ***</span>
+      Continue content of div 3 ***
+    </div>
+</body>
+</html>
+
+<!-- 補充：W3C標籤類型
+https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html -->

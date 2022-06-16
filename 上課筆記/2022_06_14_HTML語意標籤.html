@@ -1,0 +1,56 @@
+<!-- SEO: Search engine ranking 
+使用HTML語意標籤可能有助於搜尋引擎排序，但也可能不 
+
+使用HTML語意標籤取代div
+幫助電腦了解排序，也幫助人類理解code
+
+快速了解HTML語意化標籤
+https://medium.com/@changru.studio/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3html%E8%AA%9E%E6%84%8F%E5%8C%96%E6%A8%99%E7%B1%A4-33dd8247d779
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading Elements</title>
+</head>
+<body>
+    <header>
+        header element - Some header information goes here. Usually consists of company logo, some tag line, etc. Sometimes, navigation is contained in the header as well.
+        <nav>nav (short for navigation) element - Usually contains links to different parts of the web site.</nav>
+      </header>
+      <h1>Main Heading of the Page (hard not to have it)</h1>
+      <!-- <h1>This is the Main Heading</h1> -->
+      <!-- 使用h1..可以排序標題?, h1好像最重要 -->
+      <h2>Subheading 2</h2>
+      <h3>Subheading 3</h3>
+      <h4>Subheading 4</h4>
+      <h5>Subheading 5</h5>
+      <h6>Subheading 6</h6>
+      <!-- 有時候article裡面可能也會有section -->
+      <section>
+        Section 1
+        <article>Article 1</article>
+        <article>Article 2</article>
+        <article>Article 3</article>
+      </section>
+      <section>
+        Section 2
+        <article>Article 4</article>
+        <article>Article 5</article>
+        <article>Article 6</article>
+        <div>Regular DIV element</div>
+      </section>
+      <!-- 側欄 <aside>-->
+      <aside>
+        ASIDE - Some information that relates to the main topic, i.e., related posts.
+      </aside>
+      <!-- 頁尾<footer> -->
+      <footer>
+        JHU Copyright 2015
+      </footer>
+  
+</body>
+</html>
