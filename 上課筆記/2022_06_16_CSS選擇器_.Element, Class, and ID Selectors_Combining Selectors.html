@@ -1,0 +1,145 @@
+<!-- 選擇器類型
+基本知識
+基本選擇器
+類型選擇器 elementname
+Class 選擇器 (en-US) .classname
+ID 選擇器 (en-US) #idname
+通用選擇器 (en-US) * ns|* *|*
+屬性選擇器 (en-US) [attr=value]
+狀態選擇器 a:active, a:visited
+複合選擇器
+鄰接同層選擇器 (en-US) A + B
+通用同層選擇器 (en-US) A ~ B
+直屬選擇器 (en-US) A > B 要是直接小孩
+後代選擇器 A B  後代都可以
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anatomy of a CSS Rule</title>
+  <style>
+
+    /* 元素標籤選擇器 all h2 elements */
+    h2 {
+      color: red;
+      text-align: center;
+    }
+    
+    
+    /* . 類型選擇器 all with class="highlight" */
+    .highlight {
+      font-size: 20px;
+      font-weight: bold;
+      font-style: italic;
+      background-color: yellow;
+      opacity: .6;
+    }
+    
+    /* # ID 選擇器 element with id="mainPoint" */
+    #mainPoint {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: red;
+      opacity: .7;
+    }
+    
+    /* 一次選擇好幾個元素 all p AND h1 elements */
+    p, h1 {
+      color: blue;
+      text-align: center;
+    }
+    
+    /* 元素加上class選擇器  element with class */
+    /* all with class="highlight2" */
+    .highlight2 {
+      background-color: green;
+    }
+
+    /* all p elements with class="highlight" */
+    p.highlight2 {  
+      font-style: italic;
+    }
+
+    /* all elements with class 'highlight' as well as with class 'mainpoint'. */
+    .mainpoint.highlight2 {
+      color: red;
+      background-color: black;
+    }
+
+    /*  小孩選擇器：要是直接小孩   */
+    /* any article element which is a direct child of a section element,i.e., any article element whose immediate parent is a section element. */
+    section > article {
+      color: goldenrod;
+      font-size: 24px;
+    }
+
+    /* any h2 element which is a direct child of a section element,i.e., any h2 element whose immediate parent is a section element. */
+    section > h2 {
+      color: green;
+    }
+
+    /* 後代選擇器  Decendant Selector*/
+    /* all li elements that are inside a section element. */
+    /* 如果加個 > 變成小孩選擇器就選不到 li 了喔 */
+    section li {
+      color: green;
+    }
+    </style>
+</head>
+<body>
+  <!-- 標籤、ID、CLASS選擇器 -->
+  <h1>Simple Selectors (h1)</h1>
+  <h2>Subheading 1 (h2)</h2>
+  <p class="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus amet alias est? Nobis cum quasi at soluta odit, maiores quaerat dolores expedita ex nemo ea repellendus dolorem sed maxime quos?</p>
+  <p class="highlight">Paragraph with attribute class="highlight". Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <h2>Subheading 2 (h2)</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nemo ipsum dolores vel modi magnam veniam alias at nam. Voluptatem officiis dolor dolorem aspernatur dolorum modi ipsa, nobis animi aut!</p>
+  <div>This is the main point of the entire article. So, attribute 
+  <span id="mainPoint">id="mainPoint".</span> </div>
+  
+  <!-- 元素加上class選擇器 -->
+  <h1 class="highlight2">Element with Class Selector</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus amet alias est? Nobis cum quasi at soluta odit, maiores quaerat dolores expedita ex nemo ea repellendus dolorem sed maxime quos?</p>
+  <p class="highlight2">This is P with CLASS="highlight"</p>
+  <!-- 同時使用兩個class類別，中間用空白分開 -->
+  <div class="mainpoint highlight2">This is the main point of the entire article.
+  </div>
+
+  <!-- Child Selector 小孩選擇器 -->
+  <h1>Child Selector</h1>
+  <section>
+    <h2>Subheading 1</h2>
+    <div>
+      <article>ARTICLE which inside DIV, which is inside SECTION</article>
+    </div>
+  </section>
+  <section>
+    <article>ARTICLE as a direct child of the SECTION element.</article>
+  </section>
+  <h2>Subheading 2</h2>
+  
+  <!-- Decendant Selector 後代選擇器 -->
+  <h1>Decendant Selector</h1>
+  <section>
+    Table of contents:
+    <ul>
+      <li>Article 1</li>
+      <li>Article 2</li>
+      <li>Article 3</li>
+    </ul>
+  </section>
+  <article>
+    Shopping List:
+    <ul>
+      <li>Cookies</li>
+      <li>Cake</li>
+      <li>Pie</li>
+    </ul>
+  </article>
+  
+</body>
+</html>
