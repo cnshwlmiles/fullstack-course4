@@ -1,0 +1,96 @@
+<!-- Origin Merge Inheritance Specificity -->
+
+<!-- specificity
+越特定的styling設定會勝出
+越左邊的分數越大越贏
+標籤上的style > ID > class/pseudoclass > 使用的指定元素數量 -->
+<!-- 0000 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Inheritance in CSS</title>
+<style>
+    /* 誰會贏 */
+    /* 1個 class，共2個元素數量  */
+    /* 0012 */
+    header.navigation p {
+    color: blue;
+    }
+
+    /* 1個 class，共1個元素數量  */
+    /* 0011 */
+    p.blurb {
+    color: red;
+    }
+
+    /* !important 會贏  */
+    /* 如果沒有這個，藍色會贏 */
+    /* 如果沒有必要，盡量不要用這個，不然會成為維護地獄 */
+    p {
+    color: green !important;
+    }
+</style>
+</head>
+<body>
+<header class="navigation">
+  <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero soluta enim aut! Nihil nam obcaecati, fugiat sint sit libero voluptate eos incidunt odio neque cum, dignissimos aperiam, magnam nisi debitis.</p>
+</header>
+</body>
+</html>
+
+
+<!-- CSS 由上讀到下，下面的style優先
+如果兩個style沒有衝突，則會融合 -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cascade of CSS</title>
+        <link rel="stylesheet" href="2022_06_20_external.css">
+        <style>
+
+            p {
+            color: maroon;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Origin Example</h1>
+        <p>The rule is simple: last declaration wins.</p>
+        <p style="color: black;">If there is no conflict, declarations merge into one rule.</p>
+    </body>
+</html>> -->
+
+<!-- Inheritance 如果在上層標籤格式，下層標籤會自動繼承 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Inheritance in CSS</title>
+<style>
+    /* 比如說在body置中，所有的東西都會置中 */
+    body {
+    color: red;
+    text-align: center;
+    font-family: Helvetica;
+    }
+    p {
+    color: blue;
+    }
+</style>
+</head>
+<body>
+<h1>Cascade of CSS Example</h1>
+<h2>Subheading 1</h2>
+<p>Inheritence allows us to write more global styles on parent elements and then "fine-tune" the styles for some of the child elements as needed. Such approach makes writing CSS very efficient.</p>
+<h2 style="color: green;">Subheading 2</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ad excepturi eveniet odio, fuga nam quidem reprehenderit placeat commodi? In laudantium cum nam quod vitae at eligendi consequatur sequi cumque.</p>
+</body>
+</html> -->
+
