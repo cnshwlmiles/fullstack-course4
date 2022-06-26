@@ -1,3 +1,4 @@
+<!-- 顯示Bootstrap不同大小的網格呈現 -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,21 +10,29 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
 <body>
-
+  <!-- 一定要用 container(不會填滿頁面) / container-fluid(會填滿) 
+    的class，但不一定要用div -->
   <div class="container-fluid">
+    <!-- 表格要是row，總之他會調整網格大小，讓表格物件與
+    一般物件可以對齊(不然好難啊) -->
     <div class="row">
+      <!-- col-SIZE-SPAN 欄-在何種螢幕大小-橫跨12分之幾欄 -->
       <div class="col-md-4 col-sm-6">Col 1</div>
       <div class="col-md-4 col-sm-6">Col 2</div>
       <div class="col-md-4 col-sm-6">Col 3</div>
+      <div class="col-md-4 col-sm-6">Col 4</div>
     </div>
 
     <div class="row">
-      <div class="col-md-4 col-sm-6">Col 1</div>
-      <div class="col-md-4 col-sm-6">Col 2</div>
-      <div class="col-md-4 col-sm-6">Col 3</div>
+      <div class="col-md-3 col-sm-4 col-xs-6">Col 1</div>
+      <div class="col-md-3 col-sm-4 col-xs-6">Col 2</div>
+      <div class="col-md-3 col-sm-4 col-xs-6">Col 3</div>
+      <div class="col-md-3 col-sm-4 col-xs-6">Col 4</div>
     </div>
 
     <div class="row">
+      <!-- 如果只使用xs，就算很小也不會疊在一起
+      從頭到尾都可以保持一樣的排版 -->
       <div class="col-xs-6">Col 1</div>
       <div class="col-xs-6">Col 2</div>
       <div class="col-xs-6">Col 3</div>
