@@ -1,0 +1,59 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Elements</title>
+    <style>
+
+    div {
+      background-color: #00FFFF;
+    }
+    p {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+    }
+
+    #p1 {
+      background-color: red;
+      float: left; 
+      /* float 的時候margin不會消失，不float會消失*/
+      height: 150px;
+    }
+    #p2 {
+      background-color: orange;
+      /* float 的時候margin不會消失 */
+      float: right;
+      height: 100px;
+    }
+    #p3 {
+      background-color: yellow;
+      clear: both;
+      /* 試試看clear right left */
+      /* 確保不會和float左右的上面兩個物件重疊，
+      當物件長度比較長的時候就有可能重疊，
+      可調整上面相對長度試試看 */
+    }
+    #p4 {
+      background-color: green;
+    }
+
+    section {
+      clear: left;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Floating Elements</h1>
+    <div>
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+      <p id="p4"></p>
+      <section>This is regular content continuing after the the paragraph boxes.</section>
+    </div>
+  </body>
+  </html>
