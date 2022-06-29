@@ -1,0 +1,3 @@
+1. 要先設計網站的圖，不要直接開始coding
+2. 要先有個原型設計圖，使用Balsamiq Mockups圖，非免費，但沒有很貴。
+3. 使用google fonts
