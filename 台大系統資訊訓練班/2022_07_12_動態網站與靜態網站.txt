@@ -1,0 +1,12 @@
+靜態(資料)網站 Static website
+使用 CSS HTML JS 也可以有很好的特效效果
+
+動態網站 Dynamic website
+資料是會變動的：有資料庫 Database
+好比社群網站的頭貼和名字，是從資料庫裡面抓出來的
+
+動態網站分為前後端
+前端就HTML CSS JS 
+後端是存取資料庫的過程，可用
+PHP、JAVA、Python(Flask Django)寫
+Node.js
