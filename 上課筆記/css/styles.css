@@ -1,8 +1,10 @@
+/* 2022_06_29_設定body顏色、字體等 */
 body {
   font-size: 16px;
   color: #fff;
   background-color: #61122f;
-  font-family: 'Oxygen', sans-serif;
+  /* font-family: 'Oxygen', sans-serif; */
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 /** HEADER **/
