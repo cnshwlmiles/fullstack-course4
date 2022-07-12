@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Positioning Elements</title>
@@ -9,9 +10,11 @@
       margin: 0;
       padding: 0;
     }
+
     h1 {
       margin-bottom: 15px;
     }
+
     /* 位置是相對於上層標籤或容器的位置 */
     div#container {
       background-color: #00FFFF;
@@ -20,12 +23,14 @@
       position: relative;
       top: 60px;
     }
+
     p {
       width: 50px;
       height: 50px;
       border: 1px solid black;
       margin-bottom: 15px;
     }
+
     #p1 {
       background-color: #A52A2A;
       /* 相對於上層的位置 */
@@ -33,9 +38,11 @@
       top: 65px;
       left: 65px;
     }
+
     #p2 {
       background-color: #DEB887;
     }
+
     /* 絕對位置會跳出正常的排序，當作沒有這個物件 */
     #p3 {
       background-color: #5F9EA0;
@@ -43,12 +50,13 @@
       top: 0;
       left: 0;
     }
+
     #p4 {
       background-color: #FF7F50;
     }
-
   </style>
 </head>
+
 <body>
   <h1>Positioning Elements</h1>
 
@@ -59,4 +67,5 @@
     <p id="p4">p4</p>
   </div>
 </body>
+
 </html>

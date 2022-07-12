@@ -8,36 +8,41 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Inheritance in CSS</title>
-<style>
-    /* 誰會贏 */
-    /* 1個 class，共2個元素數量  */
-    /* 0012 */
-    header.navigation p {
-    color: blue;
-    }
+    <meta charset="utf-8">
+    <title>Inheritance in CSS</title>
+    <style>
+        /* 誰會贏 */
+        /* 1個 class，共2個元素數量  */
+        /* 0012 */
+        header.navigation p {
+            color: blue;
+        }
 
-    /* 1個 class，共1個元素數量  */
-    /* 0011 */
-    p.blurb {
-    color: red;
-    }
+        /* 1個 class，共1個元素數量  */
+        /* 0011 */
+        p.blurb {
+            color: red;
+        }
 
-    /* !important 會贏  */
-    /* 如果沒有這個，藍色會贏 */
-    /* 如果沒有必要，盡量不要用這個，不然會成為維護地獄 */
-    p {
-    color: green !important;
-    }
-</style>
+        /* !important 會贏  */
+        /* 如果沒有這個，藍色會贏 */
+        /* 如果沒有必要，盡量不要用這個，不然會成為維護地獄 */
+        p {
+            color: green !important;
+        }
+    </style>
 </head>
+
 <body>
-<header class="navigation">
-  <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero soluta enim aut! Nihil nam obcaecati, fugiat sint sit libero voluptate eos incidunt odio neque cum, dignissimos aperiam, magnam nisi debitis.</p>
-</header>
+    <header class="navigation">
+        <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero soluta enim aut! Nihil nam
+            obcaecati, fugiat sint sit libero voluptate eos incidunt odio neque cum, dignissimos aperiam, magnam nisi
+            debitis.</p>
+    </header>
 </body>
+
 </html>
 
 
@@ -93,4 +98,3 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ad excepturi eveniet odio, fuga nam quidem reprehenderit placeat commodi? In laudantium cum nam quod vitae at eligendi consequatur sequi cumque.</p>
 </body>
 </html> -->
-

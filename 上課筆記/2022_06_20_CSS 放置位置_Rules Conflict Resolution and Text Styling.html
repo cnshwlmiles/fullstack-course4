@@ -2,25 +2,28 @@
 現實生活的網站都會使用外部style檔案-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Style Placement</title>
-        <link rel="stylesheet" href="2022_06_20_CSS_styleSheet.css">
 
-        <!-- 在head裡面使用也是可以的，但如果要在多個文件上使用同一個css，就不實用 -->
-        <style>
-            h2 {
+<head>
+    <meta charset="utf-8">
+    <title>Style Placement</title>
+    <link rel="stylesheet" href="2022_06_20_CSS_styleSheet.css">
+
+    <!-- 在head裡面使用也是可以的，但如果要在多個文件上使用同一個css，就不實用 -->
+    <style>
+        h2 {
             color: maroon;
-            }
-        </style>
-    </head>
+        }
+    </style>
+</head>
 
-    <body>
-        <h1>Style Placement</h1>
-        <h2>Subheading 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex et similique cupiditate dignissimos delectus nulla dolore, eos dolorum quidem excepturi, facere non repellat accusamus, atque? Id voluptate eos et accusantium.</p>
-        <h2>Subheading 2</h2>
-        <!-- 可以直接在標籤裡面使用sytle，這叫做inline styling，但這是最不好重複使用的 -->
-        <p style="text-align: center;">I am centered!</p>
-    </body>
+<body>
+    <h1>Style Placement</h1>
+    <h2>Subheading 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex et similique cupiditate dignissimos delectus nulla
+        dolore, eos dolorum quidem excepturi, facere non repellat accusamus, atque? Id voluptate eos et accusantium.</p>
+    <h2>Subheading 2</h2>
+    <!-- 可以直接在標籤裡面使用sytle，這叫做inline styling，但這是最不好重複使用的 -->
+    <p style="text-align: center;">I am centered!</p>
+</body>
+
 </html>

@@ -5,33 +5,33 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>The Box Model</title>
-        <style>
-        
-            /* *Star selector 可以選取所有的元素 */
-            * {
-                /* 有包含border的盒子大小 */
-                /* Bootsrap 是使用Borderbox ，在這邊設定border box，因為box-sizing無法繼承*/
-                box-sizing: border-box;
-                /* 預設好像是Content-box */
-                /* box-sizing: content-box; */
 
-                margin: 0;
-                padding: 0;
-            }
+<head>
+    <meta charset="utf-8">
+    <title>The Box Model</title>
+    <style>
+        /* *Star selector 可以選取所有的元素 */
+        * {
+            /* 有包含border的盒子大小 */
+            /* Bootsrap 是使用Borderbox ，在這邊設定border box，因為box-sizing無法繼承*/
+            box-sizing: border-box;
+            /* 預設好像是Content-box */
+            /* box-sizing: content-box; */
 
-            body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
             background-color: gray;
             /*  box-sizing 在這邊不能用，因為不能繼承 */
             /* box-sizing: border-box; */
-            }
+        }
 
-            #box {
+        #box {
             background-color: blue;
             /* 由外而內：外間距(Margin)、邊框(border)、內縮排(padding)、內容物(content) */
-            
+
             /* 外間距：邊框與其他箱子的距離 */
             /* 上下Margin是比較大的贏，這邊的50px上邊界大於h1的下邊界，
             所以邊界會是50px */
@@ -41,33 +41,37 @@
             border: 5px solid black;
             /* 內縮排：內容物與邊框的距離 ，縮排*/
             padding: 10px;
-            
+
             /* 設定內容物的大小，如果是border box 是含邊界，如果是content box 不含邊界 */
             width: 300px;
             height: 50px;
-            
+
             /* 這可以讓他產生滑輪，如果沒有這個內容會跳出來 */
             overflow: auto;
-            }
+        }
 
-            #content {
-            background-color: #90EE90; /* green */
-            }
+        #content {
+            background-color: #90EE90;
+            /* green */
+        }
 
-            h1 {
+        h1 {
             margin-bottom: 30px;
-            }
+        }
+    </style>
+</head>
 
-        </style>
-    </head>
-    <body>
+<body>
 
-        <h1>Box Model</h1>
+    <h1>Box Model</h1>
 
-        <div id="box">
-        <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+    <div id="box">
+        <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis
+            eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex
+            similique. Animi, perferendis.
         </div>
-        </div>
+    </div>
 
-    </body>
+</body>
+
 </html>
