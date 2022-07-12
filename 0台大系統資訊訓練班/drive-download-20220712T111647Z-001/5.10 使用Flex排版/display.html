@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顯示模式</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/github.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section>
+        <h1>顯示模式</h1>
+        <p>區塊元素(block)代表: h1~h6,div,section,header,p,br,li,ul,ol...</p>
+        <p>行內文字元素(inline)代表: a, span, label</p>
+        <p>行內區塊元素(inline-block)代表: input, img, button</p>
+        <div class="display-box">div</div>
+        <a class="display-box">a</a>
+    </section>
+    <section>
+        <h1>區塊元素(block)</h1>
+        <!-- CSS設定範例 -->
+        <div class="example-code">
+            <pre>
+                <code class="css">
+選擇目標 {
+    /* 設定此元素為區塊元素 */
+    display: block;
+}
+                </code>
+            </pre>
+        </div>
+        <!-- CSS設定範例 end -->
+        <ul>
+            <li>預設:h1~h6,p,ul,ol,li,div,header,section,footer,nav,....</li>
+            <li>會造成換行</li>
+            <li>可設定width與height</li>
+        </ul>
+
+        <div class="display-box">div</div>
+        <a class="display-box d-block">a</a>
+    </section>
+    <section>
+        <h1>行內文字元素(inline)</h1>
+        <!-- CSS設定範例 -->
+        <div class="example-code">
+            <pre>
+                <code class="css">
+選擇目標 {
+    /* 設定此元素為行內文字元素 */
+    display: inline;
+}
+                </code>
+            </pre>
+        </div>
+        <!-- CSS設定範例 end -->
+        <ul>
+            <li>預設:a,span,label,:before,:after</li>
+            <li>不會造成換行</li>
+            <li>無法設定width,height</li>
+            <li>中間會有空格</li>
+        </ul>
+
+        <div class="display-box d-inline">div</div>
+        <a class="display-box">anchor</a>
+    </section>
+    <section>
+        <h1>行內區塊元素(inline-block)</h1>
+        <!-- CSS設定範例 -->
+        <div class="example-code">
+            <pre>
+                <code class="css">
+選擇目標 {
+    /* 設定此元素為行內區塊元素 */
+    display: inline-block;
+}
+                </code>
+            </pre>
+        </div>
+        <!-- CSS設定範例 end -->
+        <ul>
+            <li>預設:img,button,input,textarea,select</li>
+            <li>不會造成換行</li>
+            <li>可以設定width,height</li>
+            <li>中間也會有空格</li>
+        </ul>
+
+        <div class="display-box d-inline-block">div</div>
+        <a class="display-box d-inline-block">a</a>
+    </section>
+    <section>
+        <h1>Flex元素(flex)</h1>
+        <!-- row -->
+        <div class="row">
+            <!-- col -->
+            <div class="col">
+                <h3>1st col</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
+                    vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
+                    officiis reprehenderit unde!</p>
+            </div>
+            <!-- col end -->
+            <!-- col -->
+            <div class="col">
+                <h3>2nd col</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
+                    vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
+                    officiis reprehenderit unde!</p>
+            </div>
+            <!-- col end -->
+            <!-- col -->
+            <div class="col">
+                <h3>3rd col</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
+                    vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
+                    officiis reprehenderit unde!</p>
+            </div>
+            <!-- col end -->
+            <!-- col -->
+            <div class="col">
+                <h3>4th col</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
+                    vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
+                    officiis reprehenderit unde!</p>
+            </div>
+            <!-- col end -->
+            <!-- col -->
+            <div class="col">
+                <h3>5th col</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
+                    vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
+                    officiis reprehenderit unde!</p>
+            </div>
+            <!-- col end -->
+            <!-- col -->
+            <div class="col">
+                <h3>6th col</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
+                    vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
+                    officiis reprehenderit unde!</p>
+            </div>
+            <!-- col end -->
+        </div>
+        <!-- row end -->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('.example-code>pre>code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+
+</html>

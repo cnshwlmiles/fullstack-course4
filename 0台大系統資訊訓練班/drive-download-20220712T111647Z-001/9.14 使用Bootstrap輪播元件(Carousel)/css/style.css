@@ -1,0 +1,218 @@
+/*=============================================
+=                  General                    =
+=============================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*=============================================
+=                  Navbar                     =
+=============================================*/
+
+.navbar {
+    box-shadow: 0 3px 18px rgba(0, 0, 0, .11);
+}
+
+/*=============================================
+=                  Header                     =
+=============================================*/
+/* TODO: 加入背景圖片 */
+#header {
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+/*=============================================
+=                  Intro                      =
+=============================================*/
+.intro-box {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: all .5s ease-out;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.intro-box:hover {
+    background: white;
+    box-shadow: 0px 22px 22px rgba(0,0,0,.25);
+}
+
+.intro-line {
+    width: 20px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 10px auto;
+    transition: all .5s ease;
+}
+
+.intro-box:hover .intro-line {
+    width: 40px;
+}
+
+/*=============================================
+=                  Features                   =
+=============================================*/
+
+/*=============================================
+=                  Reviews                    =
+=============================================*/
+
+/*=============================================
+=                  Gallery                    =
+=============================================*/
+
+/* TODO: 設定Hover特效 */
+
+[id^='galleryImage'] {
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: grayscale(100%);
+    transition: all .5s ease;
+}
+
+[id^='galleryImage']>.gallery-text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    transition: all .5s ease;
+}
+
+[id^='galleryImage']:hover {
+    filter: grayscale(0%);
+}
+
+[id^='galleryImage']:hover>.gallery-text {
+    
+}
+
+/* 放入背景圖片 */
+
+#galleryImage1 {
+    background-image: url('../img/gallery-image-1.jpg');
+}
+
+#galleryImage2 {
+    background-image: url('../img/gallery-image-2.jpg');
+}
+
+#galleryImage3 {
+    background-image: url('../img/gallery-image-3.jpg');
+}
+
+#galleryImage4 {
+    background-image: url('../img/gallery-image-4.jpg');
+}
+
+#galleryImage5 {
+    background-image: url('../img/gallery-image-5.jpg');
+}
+
+#galleryImage6 {
+    background-image: url('../img/gallery-image-6.jpg');
+}
+
+#galleryImage7 {
+    background-image: url('../img/gallery-image-7.jpg');
+}
+
+#galleryImage8 {
+    background-image: url('../img/gallery-image-8.jpg');
+}
+
+/*=============================================
+=                  Start Now                  =
+=============================================*/
+
+/*=============================================
+=                   Footer                    =
+=============================================*/
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-end p {
+    font-size: 8px;
+    margin: 0;
+}
+
+#goBackBtn {
+    width: 40px;
+    height: 40px;
+    border:none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+/*=============================================
+=                   AD-BOX                    =
+=============================================*/
+
+.ad-box {
+    width: 300px;
+    position: fixed;
+    right: -275px;
+    bottom: 80px;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.ad-box.active {
+    right: 0px;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+}
+
+.ad-toggle-btn {
+    width: 25px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+.ad-toggle-btn>i {
+    transform: rotateZ(90deg);
+}
+
+.ad-toggle-btn:hover {
+    color: #666;
+}
+
+.right-part {
+    padding: 10px;
+}
+
+.right-part>p{
+    margin-bottom: 0;
+}

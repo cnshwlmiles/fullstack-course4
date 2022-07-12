@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="post">
+    <h1>機票訂位範例</h3>
+    <label for="passportNumber">護照號碼</label>
+    <input type="text" minlength="8"  maxlength="8" placeholder="你的護照號碼" name="passportNumber" id="passportNumber" autofocus required/>
+    <br />
+    <label for="email">Email</label>
+    <input type="email" placeholder="你的信箱" name="email" id="email" required/>
+    <br />
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="你的密碼" required/>
+    <br />
+    <label for="travelerNumber">旅客人數</label>
+    <input type="number" name="travelerNumber" id="travelerNumber" max="15" min="1" required/>
+    <br />
+    <label for="departTime">出發日期</label>
+    <input type="date" name="departTime" id="departTime" required/>
+    <label for="returnTime">回程日期</label>
+    <input type="date" name="returnTime" id="returnTime" required/>
+    <br />
+    <h3>機票類型</h3>
+    <label for="oneWayTicket">單程票</label>
+    <input name="tripType" type="radio" value="oneWayTicket" id="oneWayTicket" required/>
+    <label for="roundWayTicket">來回票</label>
+    <input name="tripType" type="radio" value="roundWayTicket" id="roundWayTicket" required/>
+    <br />
+    <h3>額外服務</h3>
+      <label for="additionLuggage">額外行李</label>
+      <input type="checkbox" name="additionService[]" id="additionLuggage" value="additionLuggage" />
+      <label for="chooseSeat">自選座位</label>
+      <input type="checkbox" name="additionService[]" id="chooseSeat" value="chooseSeat" />
+      <label for="orderMeal">預定餐點</label>
+      <input type="checkbox" name="additionService[]" id="orderMeal" value="orderMeal" />
+    <br />
+    <h3>餐點選擇</h3>
+    <select name="meal" id="meal">
+      <option value="normal" selected>一般餐</option>
+      <option value="vegetarian">素食餐</option>
+      <option value="mikeEggVegetarian">奶蛋素食餐</option>
+    </select>
+    <br />
+    <input type="submit" value="送出">
+    <input type="reset" value="清除所有">
+  </form>
+</body>
+</html>

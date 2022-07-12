@@ -1,0 +1,58 @@
+/*=============================================
+=                   GENERAL                   =
+=============================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+button,
+section {
+    font-family: 'Microsoft JhengHei', sans-serif;
+}
+
+section {
+    border-bottom: 1px solid #999;
+    padding-bottom: 50px;
+}
+
+
+/*=============================================
+=                   DISPLAY                   =
+=============================================*/
+
+.display-box {
+    width: 100px;
+    height: 100px;
+    background: #00b2a9;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.d-block {
+    display: block;
+    /* 設定此元素為區塊元素 */
+}
+
+.d-inline {
+    display: inline;
+    /* 設定此元素為行內文字元素 */
+}
+
+.d-inline-block {
+    display: inline-block;
+    /* 設定此元素為行內區塊元素 */
+}
+
+.row {
+    border: 1px solid black;
+}
+
+.col {
+    border: 1px solid black;
+}

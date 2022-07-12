@@ -1,0 +1,54 @@
+<!-- SEO: Search engine ranking 
+使用HTML語意標籤可能有助於搜尋引擎排序，但也可能不 
+
+使用HTML語意標籤取代div
+幫助電腦了解排序，也幫助人類理解code
+
+快速了解HTML語意化標籤
+https://medium.com/@changru.studio/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3html%E8%AA%9E%E6%84%8F%E5%8C%96%E6%A8%99%E7%B1%A4-33dd8247d779
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 圖片 -->
+  <img src="網址" alt="我是替代文字">
+  <!-- 網址 -->
+  <a href="https://網址">連結名稱</a>
+
+  <!-- div Document Division，用來表達一個區塊。
+  例如：導覽列、邊欄、文章…。 -->
+  <!-- span
+  span是一種行內元素，常用於一段文字內的局部內容強調
+  如：特別的強調、小圖示 -->
+
+
+  <!-- form用來創建使用者輸入的表單，裡頭可包含多個input標籤。 -->
+  <form action="form_action.asp" method="post">
+    <label for="myEmail">帳號</label>
+    <input type="email" id="myEmail">
+    <label for="myPassword">密碼</label>
+    <input type="password" id="myPassword">
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- 文字輸入 input -->
+  <!-- 加上required代表必填 -->
+  <input type="text" required>
+
+  <!-- 當沒有內容填寫時，輸入框將顯示placeholder的值 -->
+  <input type="text" placeholder="Your first name">
+
+
+
+</body>
+
+</html>

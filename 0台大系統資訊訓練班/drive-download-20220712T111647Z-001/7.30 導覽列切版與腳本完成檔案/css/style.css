@@ -1,0 +1,250 @@
+/*=============================================
+=                   GENERAL                   =
+=============================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+button,
+section {
+    font-family: 'Microsoft JhengHei', sans-serif;
+}
+
+/*=============================================
+=                  POSITION                   =
+=============================================*/
+.navbar {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #333;
+    box-shadow: 0px 5px 20px rgba(0,0,0,.4);
+    position: fixed;
+    /* 固定到畫面的左上角 */
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-list a {
+    margin-right: 15px;
+}
+
+.navbar-list a:last-child {
+    margin-right: 0;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+/* 定義>=600px螢幕寬度就是手機版 */
+@media (max-width: 600px) {
+    .navbar-list {
+        position: fixed;
+        left: -200px;
+        top: 0px;
+        background-color: #222;
+        width: 200px;
+        height: 100vh;
+        transition: all .3s ease-out;
+    }
+    /* 選到同時擁有.navbar-list跟.active的元素 */
+    .navbar-list.active {
+        left: 0px;
+    }
+    .navbar-list a {
+        display: block;
+        padding: 15px 15px;
+    }
+    .navbar-toggler {
+        display: block;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+    .line {
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin: 0 auto;
+        position: relative;
+    }
+    .line,
+    .line:after,
+    .line:before {
+        transition: all .3s ease;
+    }
+
+    .line.active {
+        transform: rotate(45deg);
+    }
+    .line.active:after {
+        top: 0px;
+    }
+    .line.active:before {
+        transform: rotate(90deg);
+        bottom: 0px;
+    }
+    .line:after,
+    .line:before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        display: block;
+        position: absolute;
+    }
+    .line:after {
+        top: 5px;
+    }
+    .line:before {
+        bottom: 5px;
+    }
+}
+
+.relative-btn {
+    border: none;
+    height: 40px;
+    color: white;
+    padding: 0 20px;
+    background: #30c39e;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+    /* transition: all .3s ease; */
+    position: relative;
+    bottom: 0px;
+    transition: all .5s ease-out;
+}
+
+.relative-btn:hover {
+    background: #0085ad;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, .2);
+    bottom: 5px;
+}
+
+.outer-box {
+    width: 200px;
+    height: 200px;
+    color: white;
+    background: #003666;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+}
+
+.inner-box {
+    width: 80px;
+    height: 80px;
+    background: #2dde98;
+    border-radius: 5px;
+    opacity: .8;
+    box-shadow: 0px 5px 5px rgba(0,0,0,.5);
+    /* 設定此元素定位到上層元素(.outer-box)的指定位置 */
+    position: absolute;
+    /* 定位到上層元素的右上角 */
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+}
+
+.inner-box:hover {
+    opacity: 1;
+}
+
+.center-box {
+    background-color: orange;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    opacity: 1;
+    position: absolute;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .2), 0 0 0 0px rgba(255, 99, 71, 0);
+    transition: all .3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 25px 20px rgba(0, 0, 0, .2), 0 0 0 3px rgba(255, 99, 71, 1);
+}
+
+.card-header>img {
+    display: block;
+    filter: brightness(1);
+    transition: all .3s ease;
+}
+
+.card:hover .card-header>img {
+    filter: brightness(1.2);
+}
+
+.card-body {
+    padding: 10px 10px;
+}
+
+.card-body h4,
+.card-body p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.card-header {
+    position: relative;
+    /* 當內部元素超出時，不顯示 */
+    overflow: hidden;
+}
+
+.card-btns {
+    position: absolute;
+    right: -200px;
+    bottom: 15px;
+    transition: all .3s cubic-bezier(.28,1.29,.42,1.46);
+}
+
+/* 當card被hover後，設定card裡面的card-btns樣式 */
+.card:hover .card-btns {
+    right: 15px;
+}
+
+.card-btns button {
+    color: tomato;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    opacity: .7;
+    transition: all .3s ease;
+    position: relative;
+    bottom: 0;
+}
+
+.card-btns button:hover {
+    opacity: 1;
+    bottom: 5px;
+}
