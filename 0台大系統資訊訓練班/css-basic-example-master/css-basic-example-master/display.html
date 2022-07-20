@@ -6,101 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>顯示模式</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <!-- 使用normalize.css 降低各瀏覽器預設設定的差異-->
-    <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/github.min.css">
-    <!-- 自己的設定要在最底下 -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/display.css">
 </head>
 
 <body>
-    <section>
-        <h1>顯示模式</h1>
-        <p>區塊元素(block)代表: h1~h6,div,section,header,p,br,li,ul,ol...</p>
-        <p>行內文字元素(inline)代表: a, span, label</p>
-        <p>行內區塊元素(inline-block)代表: input, img, button</p>
+    <h1>顯示模式</h1>
+    <section class="display-section">
+        <h2>區塊元素(block)</h2>
+        <div id="blockCodeExampleCodeBlock" class="example-code"></div>
+        <ul>
+            <li>預設：h1~h6,p,form,div,section,header,nav,footer...</li>
+            <li>「」造成「換行」</li>
+            <li>「」設定「width」與「height」</li>
+        </ul>
+
+        <p>試著讓下方的a成為區塊元素(block)：</p>
         <div class="display-box">div</div>
         <a class="display-box">a</a>
     </section>
-    <section>
-        <h1>區塊元素(block)</h1>
-        <!-- CSS設定範例 -->
-        <div class="example-code">
-            <pre>
-                <code class="css">
-選擇目標 {
-    /* 設定此元素為區塊元素 */
-    display: block;
-}
-                </code>
-            </pre>
-        </div>
-        <!-- CSS設定範例 end -->
+    <section class="display-section">
+        <h2>行內文字元素(inline)</h2>
+        <div id="inlineCodeExampleCodeBlock" class="example-code"></div>
         <ul>
-            <li>預設:h1~h6,p,ul,ol,li,div,header,section,footer,nav,....</li>
-            <li>會造成換行</li>
-            <li>可設定width與height</li>
+            <li>預設：a,span,label,:before,:after</li>
+            <li>「」造成「換行」</li>
+            <li>「」設定「width」與「height」</li>
+            <li>中間會有「」</li>
         </ul>
 
+        <p>試著讓下方的div成為行內文字元素(inline)：</p>
         <div class="display-box">div</div>
-        <a class="display-box d-block">a</a>
+        <a class="display-box">a</a>
     </section>
-    <section>
-        <h1>行內文字元素(inline)</h1>
-        <!-- CSS設定範例 -->
-        <div class="example-code">
-            <pre>
-                <code class="css">
-選擇目標 {
-    /* 設定此元素為行內文字元素 */
-    display: inline;
-}
-                </code>
-            </pre>
-        </div>
-        <!-- CSS設定範例 end -->
+    <section class="display-section">
+        <h2>行內區塊元素(inline-block)</h2>
+        <div id="inlineBlockCodeExampleCodeBlock" class="example-code"></div>
         <ul>
-            <li>預設:a,span,label,:before,:after</li>
-            <li>不會造成換行</li>
-            <li>無法設定width,height</li>
-            <li>中間會有空格</li>
+            <li>預設：img,button,input,textarea</li>
+            <li>「」造成「換行」</li>
+            <li>「」設定「width」與「height」</li>
+            <li>中間會有「」</li>
         </ul>
 
-        <div class="display-box d-inline">div</div>
-        <a class="display-box">anchor</a>
+        <p>試著讓下方的div,a成為行內區塊元素(inline-block)：</p>
+        <div class="display-box">div</div>
+        <a class="display-box">a</a>
     </section>
-    <section>
-        <h1>行內區塊元素(inline-block)</h1>
-        <!-- CSS設定範例 -->
-        <div class="example-code">
-            <pre>
-                <code class="css">
-選擇目標 {
-    /* 設定此元素為行內區塊元素 */
-    display: inline-block;
-}
-                </code>
-            </pre>
-        </div>
-        <!-- CSS設定範例 end -->
-        <ul>
-            <li>預設:img,button,input,textarea,select</li>
-            <li>不會造成換行</li>
-            <li>可以設定width,height</li>
-            <li>中間也會有空格</li>
-        </ul>
-
-        <div class="display-box d-inline-block">div</div>
-        <a class="display-box d-inline-block">a</a>
-    </section>
-    <section>
-        <h1>Flex元素(flex)</h1>
+    <section class="display-section">
+        <h2>Flex元素(flex)</h2>
+        <h3>使用Flex排版</h3>
+        <p>試著將下方的六個.col的寬度設定為1/3並且並列排版。</p>
         <!-- row -->
         <div class="row">
             <!-- col -->
             <div class="col">
-                <h3>1st col</h3>
+                <h3>第1個 col</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
                     vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
                     officiis reprehenderit unde!</p>
@@ -108,7 +72,7 @@
             <!-- col end -->
             <!-- col -->
             <div class="col">
-                <h3>2nd col</h3>
+                <h3>第2個 col</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
                     vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
                     officiis reprehenderit unde!</p>
@@ -116,7 +80,7 @@
             <!-- col end -->
             <!-- col -->
             <div class="col">
-                <h3>3rd col</h3>
+                <h3>第3個 col</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
                     vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
                     officiis reprehenderit unde!</p>
@@ -124,7 +88,7 @@
             <!-- col end -->
             <!-- col -->
             <div class="col">
-                <h3>4th col</h3>
+                <h3>第4個 col</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
                     vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
                     officiis reprehenderit unde!</p>
@@ -132,7 +96,7 @@
             <!-- col end -->
             <!-- col -->
             <div class="col">
-                <h3>5th col</h3>
+                <h3>第5個 col</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
                     vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
                     officiis reprehenderit unde!</p>
@@ -140,7 +104,7 @@
             <!-- col end -->
             <!-- col -->
             <div class="col">
-                <h3>6th col</h3>
+                <h3>第6個 col</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nisi eligendi suscipit cum dolorum
                     vel ducimus nesciunt molestiae, nihil reprehenderit accusamus quasi, id quaerat! Odio ipsa veniam
                     officiis reprehenderit unde!</p>
@@ -148,15 +112,22 @@
             <!-- col end -->
         </div>
         <!-- row end -->
+        <h3>Flex對齊方式</h3>
+        <div class="flex-box">
+            <div class="item-box">
+                <span>item-box</span>
+            </div>
+            <div class="item-box">
+                <span>item-box</span>
+            </div>
+            <div class="item-box">
+                <span>item-box</span>
+            </div>
+        </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('.example-code>pre>code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-        });
-    </script>
+    <script src="./js/display.js"></script>
+    <script src="./js/code-highlight.js"></script>
 </body>
 
 </html>

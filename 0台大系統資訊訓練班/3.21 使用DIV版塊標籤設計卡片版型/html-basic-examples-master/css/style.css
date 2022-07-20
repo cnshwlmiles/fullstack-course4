@@ -29,6 +29,7 @@ body {
     border-radius: 20px;
 }
 
+/* 將圖片大小設定為100%，將圖片大小設定為容器的 100% */
 .card-img {
     width: 100%;
     display: block;

@@ -48,12 +48,15 @@ body {
 }
 
 /*============ table 頁面 ============*/
-table, td, th {
+table,
+td,
+th {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
     padding: 8px 20px;
 }
 
@@ -61,6 +64,7 @@ td, th {
     text-align: right;
 }
 
+/* 在內容前後加上特定文字 */
 .price:before {
     content: "$ ";
 }

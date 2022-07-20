@@ -1,3 +1,4 @@
+<!-- 使用 Picsum Photos 線上圖庫 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,24 @@
 
 <body>
     <h1>超連結(a)</h1>
+    <a href="./about.html">關於本站</a>
+    <a href="./products/product1.html">產品一</a>
+    <a target="_blank" href="https://www.google.com.tw/?hl=zh_TW">google連結</a>
+
+    <!-- target blank的風險，假使連到對方是不安全的網站，就會有風險
+    對方可以用javascript取得上一頁的物件 -->
+    <a target="_blank" href="./about.html">另開分頁來到關於本站</a>    
+
     <h1>圖片(img)</h1>
+    <!-- 常用 jpg jpeg png gif svg(設計師常用) 最好< 1mb -->
+    <!-- 長寬 height width 固定 二選一 不然比例會變 -->
+    <!-- alt 會讓瀏覽器做圖片分析 -->
+    <img src="./images/image1.jpg" alt="這是圖片" width="460">
+
+    <!-- Picsum Photos  可以更改ID 和大小-->
+    <div><img src="https://picsum.photos/id/89/600/300" alt="picsum"></div>
+
+
 </body>
 
 </html>

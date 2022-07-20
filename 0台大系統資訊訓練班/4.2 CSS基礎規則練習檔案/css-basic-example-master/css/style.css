@@ -1,0 +1,50 @@
+/*=============================================
+=                   GENERAL                   =
+=============================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+button,
+section {
+    font-family: 'Microsoft JhengHei', sans-serif;
+}
+
+/*=============================================
+=                  SELECTORS                  =
+=============================================*/
+.container {
+    border: 2px solid black;
+}
+
+.container>article {
+    background: #d7d7d8;
+}
+
+/*=============================================
+=                  BOX-MODEL                  =
+=============================================*/
+
+.example-box {
+    width: 300px;
+    height: 300px;
+    background: #faae40;
+    border: 3px solid black;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    transition: all .5s ease;
+}
+
+.example-box:hover {
+    background: #e29e3e;
+    box-shadow: 0px 25px 20px rgba(0,0,0,.2);
+}
+
+.example-box>* {
+    margin: 0;
+}

