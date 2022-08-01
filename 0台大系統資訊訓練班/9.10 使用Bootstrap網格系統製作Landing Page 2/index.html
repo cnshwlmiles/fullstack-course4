@@ -66,8 +66,10 @@
         <h1 class="section-title text-center text-secondary mb-5">Intro</h1>
         <div class="container">
             <!-- 修正排版為三項排一排 -->
+            <!-- 上層加入div.row , 下層加入col-md-4 -->
             <div class="row">
                 <div class="col-md-4">
+                    <!-- intro box 會動 -->
                     <div class="intro-box">
                         <div class="icon text-primary py-3">
                             <i class="fas fa-paper-plane fa-5x" aria-hidden="true"></i>
@@ -98,7 +100,10 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 留白設定 -->
             <!-- 設定此區塊距離上方5倍margin -->
+            <!--  margin top 5 倍mt-5  -->
             <!-- 修正排版在md時六個排一排 sm三個排一排 sm以下兩個排一排-->
             <div class="row mt-5">
                 <div class="col-md-2 col-sm-4 col-6 text-center">
@@ -129,14 +134,21 @@
         </div>
     </section>
     <!-- introSection end -->
+
     <!-- featuresSection -->
+    <!-- collapse 把東西收起來 tab 分頁互動方式-->
+
+    <!-- py-5 是 padding y .軸 -->
+
     <section id="featuresSection" class="py-5 bg-secondary text-white">
         <div class="container">
             <h1 class="section-title mb-5 text-center">Features</h1>
-            <!-- 設定row內的區塊置中對齊 -->
+
+            <!-- 設定row內的區塊置中對齊 justify-content-center-->
             <div class="row justify-content-center">
                 <div class="col-sm-10 col-md-8">
                     <!-- 為article1 article2 設置collapse互動方式 -->
+                    <!-- data-toggle 資料切換方式 -->
                     <button data-toggle="collapse" data-target="#article1" class="btn btn-primary">Team</button>
                     <button data-toggle="collapse" data-target="#article2" class="btn btn-primary">Location</button>
                     <article class="my-3 collapse show" id="article1">
@@ -147,7 +159,8 @@
                             than
                             one hat. We provide different kinds of
                             <strong>Project management, Security and Data Storage solution package</strong> for our
-                            customers </p>
+                            customers
+                        </p>
                     </article>
                     <article class="my-3 collapse" id="article2">
                         <h3>Location</h3>
@@ -196,14 +209,20 @@
                         </article>
                     </div>
                     <!-- 崁入一個youtube影片 https://www.youtube.com/watch?v=gwDoRPcPxtc -->
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/gwDoRPcPxtc" frameborder="0"
+                    <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/gwDoRPcPxtc" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe> -->
+                    <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/LkI0Vz_PnnA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
+
                 </div>
             </div>
         </div>
     </section>
     <!-- featuresSection end -->
+
     <!-- reviewsSection -->
     <section id="reviewsSection" class="py-5">
         <!-- TODO: 使用輪播(Carousel)元件放入以下兩頁內容 -->
@@ -373,6 +392,7 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- 下面三個套件引用進來才能使用 -->
     <!-- jquery.min.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- popper.min.js -->
