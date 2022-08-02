@@ -36,6 +36,7 @@ button:focus {
     border-radius: 0px;
     margin-bottom: 0px;
     background-image: url("../img/header-image.jpg");
+    /* 設定背景圖的大小 */
     background-size: cover;
     background-position: center center;
 }
