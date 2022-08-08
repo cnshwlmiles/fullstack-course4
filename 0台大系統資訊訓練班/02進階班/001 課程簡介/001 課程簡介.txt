@@ -1,0 +1,16 @@
+前端：
+
+JavaScript語言
+jQuery
+常見網頁互動特效
+HTML5 API
+Localstorage & Cookie
+
+後端：
+
+Google Firebase API
+Node.js & Express 動態資料網站架構
+EJS模版系統
+動態資料網站部署
+
+
