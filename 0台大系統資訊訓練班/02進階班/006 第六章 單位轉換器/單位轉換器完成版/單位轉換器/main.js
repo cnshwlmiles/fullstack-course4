@@ -27,6 +27,7 @@ inchInput.addEventListener("input", function () {
     }
 });
 
+// 公分輸入的變更事件
 cmInput.addEventListener("input", function () {
     const cm = parseFloat(cmInput.value);
     let inch = cm / 2.54;
