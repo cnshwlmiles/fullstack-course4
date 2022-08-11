@@ -1,3 +1,4 @@
+<!-- 瀏覽器先閱讀HTML，Javacript由上往下執行 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +13,7 @@
 
 <body>
     <div class="container">
+        <!-- 從網頁獲取使用者輸入的資料，常使用ID，小駝峰 -->
         <h1>自我介紹產生器</h1>
         <input class="form-control" type="text" id="nameInput" placeholder="名字...">
         <br>
@@ -19,10 +21,22 @@
         <br>
         <input class="form-control" type="text" id="titleInput" placeholder="職稱...">
         <br>
+        <input type="text" class="form-control" id="interestInput" placeholder="興趣...">
+        <br>
         <button class="btn btn-primary" id="btn">產生自我介紹</button>
+        <!-- 下面是要顯示產生自我介紹的地方 -->
         <div id="introBlock"></div>
+
+        
     </div>
 
+    <!-- <script>
+        // 方法一：直接在裡面打script
+        // 跳出一個小視窗
+        alert('我會在網站開啟時顯示彈出式視窗')
+    </script> -->
+
+    <!-- 方法二 直接引用一個網頁 -->
     <script src="./main.js"></script>
 </body>
 
