@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.navbar {
+    box-shadow: 0 3px 3px rgba(0,0,0,.3)
+}
+
+#scrollReport {
+    color: white;
+    background: black;
+    padding: 10px 10px;
+    border-radius: 4px;
+    opacity: .7;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,.5);
+}
+
+#scrollReport:hover {
+    opacity: .9;
+}
