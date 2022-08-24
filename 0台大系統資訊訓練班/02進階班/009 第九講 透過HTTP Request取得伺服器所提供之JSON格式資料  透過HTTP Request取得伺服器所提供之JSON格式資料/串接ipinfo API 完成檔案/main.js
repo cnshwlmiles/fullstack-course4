@@ -1,8 +1,14 @@
+// 串接後端資料常使用JSON格式，前端傳送http request之後，會向後端索取JSON資料
+
 /*
  * TODO: 串接ipinfo.io服務取得使用者的IP資訊，並顯示結果於網頁上
  * https://ipinfo.io/
  * 一個可回傳用戶端IP資訊的公開API服務
  */
+
+data2 = {}
+
+// 先將需要的常數(?抓出來
 const btn = document.getElementById("btn");
 const reportBlock = document.getElementById("reportBlock");
 
@@ -12,15 +18,39 @@ const url = "https://ipinfo.io/json?token=9828da42eb0f24";
 // 綁定按鈕的點擊事件
 btn.addEventListener("click", function () {
     console.log("準備取得使用者的IP資訊");
-    // 透過axios對API發送HTTP Request
+    
+    // 使用官方範例取得資料，但是有很多then比較麻煩
+    // fetch("https://ipinfo.io/json?token=a487570b662ea4").then(
+    // (response) => response.json()
+    // ).then(
+    // (jsonResponse) => console.log(jsonResponse.ip, jsonResponse.country)
+    // )
+    
+    // 透過axios對API發送HTTP Request (常見方式，知名函式庫)
+    // then 跟 catch 都是官方函數裡面放的東西，.get().then().catch()
+    // 為了排版方便把他切開，()裡面都要放函數，res是函數的名字，可自由命名
     axios
         .get(url)
+        
+        // .then .catch 是來處理錯誤流程的
         // 如果請求有發出且成功獲得後端的回應
-        .then(res => {
-            // console.log("ipinfo伺服器的回應", res);
-            // const data = res.data;
-            const { data } = res;
+        .then(     
+            // function(res){
+            //     console.log( res)
+            // }  
+
+            //以下為簡寫  
+            res => {
+            console.log("ipinfo伺服器的回應", res);
+            
+            // 兩個表示方式都可以
+            const data = res.data;
+            // const { data } = res;
+
             console.log("ipinfo回傳的資料", data);
+            
+            // 資料解析
+            // 以下為 city = data.city 的簡寫
             const { city, country, ip, org, timezone } = data;
             const report = `<div class="alert alert-info">
                 CITY: ${city} <br>
@@ -30,8 +60,10 @@ btn.addEventListener("click", function () {
                 時區: ${timezone}
             </div>`;
             reportBlock.innerHTML = report;
-        })
-        // 如果取得資料的流程發生了任何錯誤
+        }
+        )
+
+        // 如果取得資料的流程發生了任何錯誤(錯誤處理)
         .catch(err => {
             console.log("發生錯誤", err);
             const report = `<div class="alert alert-danger">
