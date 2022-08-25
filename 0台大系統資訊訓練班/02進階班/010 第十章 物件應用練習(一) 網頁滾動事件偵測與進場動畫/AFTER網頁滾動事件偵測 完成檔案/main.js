@@ -1,12 +1,21 @@
-// 所有導覽列中的連結nav-link
-// .navbar class="navbar" 裡面的 class="nav-link"
+// 選取所有導覽列中的連結nav-link (4個section的連結)
+// .navbar class="navbar" 裡面的 class="nav-link" (跟CSS選擇器一樣)
 const navLinkList = document.querySelectorAll('.navbar .nav-link'),
     // 導覽列
     navbar = document.getElementById('navbar'),
     // 滑動資訊報告元件
     scrollReport = document.getElementById('scrollReport');
 
-// 建立章節資訊查詢表 navigationTable
+// console.log('navLinkList', navLinkList)
+console.log('navLinkList', navLinkList[0].innerText)
+// navLinkList Section 1
+
+// console.log('navbar', navbar)
+// console.dir(scrollReport)
+// 找出所有可以用的屬性
+
+// 10.2 透過物件建構區塊與連結的關聯表
+// 建立章節資訊查詢表 navigationTable (結果要存成下面的樣子)
 /*
  * {
  *    section1: {section: sectionDOM, link: navLinkDOM},
@@ -14,14 +23,27 @@ const navLinkList = document.querySelectorAll('.navbar .nav-link'),
  * }
  *
  */
+
+
+// const array1 = ['a', 'b', 'c'];
+// array1.forEach(element => console.log(element));
+
+// 產生一個空白物件
 const navigationTable = {};
+
 // 透過forEach迴圈取出 navLinkList 裡所有的連結DOM
 navLinkList.forEach(a => {
     // console.log("a", a);
+    
+    // .dataset.target .dataset會抓到data-xxx的部分
     const sectionId = a.dataset.target;
+    
+    // 存進物件裡面
     // 物件["屬性名"] = 值
     navigationTable[sectionId] = {
+        // 標籤
         link: a,
+        // section
         section: document.getElementById(sectionId)
     };
 });
@@ -31,6 +53,7 @@ console.log(navigationTable);
 // 綁定視窗(window)的滾動事件(scroll)
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
 window.addEventListener('scroll', function () {
+    
     // 取得視窗的直向滑動偵測點(scrollY)
     // 視窗頂邊的座標 + 導覽列的高度
     const y = Math.round(window.scrollY + navbar.offsetHeight);
