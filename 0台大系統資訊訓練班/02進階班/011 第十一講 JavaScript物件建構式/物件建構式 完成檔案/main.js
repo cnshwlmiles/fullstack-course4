@@ -7,6 +7,8 @@ const user1 = {
     }
 };
 
+user1.intro('哈囉安安大家好')
+
 // [物件建構式]是一種用來[產生]物件的函數
 
 // 設計一個用來產生user物件的建構式
@@ -15,6 +17,7 @@ function User(name, age) {
     this.name = name;
     this.age = age;
     this.level = 1;
+    // 11.4 為函數的參數設定預設值
     this.intro = function (greeting = "Hi") {
         console.log(`${greeting},我是${this.name}今年${this.age}歲`)
     }

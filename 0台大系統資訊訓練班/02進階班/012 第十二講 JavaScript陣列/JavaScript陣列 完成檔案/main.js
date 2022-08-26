@@ -44,18 +44,23 @@ productList.forEach(product => {
 
 const countrySelect = document.getElementById("countrySelect");
 
+// 如果改變會跳出警告，跳出國家簡寫
 countrySelect.addEventListener("change", function () {
     alert(countrySelect.value);
 });
 
-axios.get("https://restcountries.eu/rest/v2/all")
+// 串接前後端的小幫手 axios
+axios.get("https://restcountries.com/v3.1/all")
+    // 如果成功
     .then(res => {
+        console.log("取得資料成功", res);
         res.data.forEach(country => {
             console.log(country);
-            const opt = `<option value="${country.alpha2Code}">${country.name}</option>`;
+            const opt = `<option value="${country.cca2}">${country.name.common}</option>`;
             countrySelect.innerHTML += opt;
         })
     })
+    // 如果失敗用Catch
     .catch(err => {
         console.log("取得資料失敗", err);
     })

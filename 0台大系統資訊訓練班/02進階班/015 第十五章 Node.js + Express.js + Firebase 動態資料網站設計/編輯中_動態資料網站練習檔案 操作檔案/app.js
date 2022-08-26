@@ -1,3 +1,8 @@
+// 這些檔案是伺服器端的邏輯的JS，不是拿來做特效的KS
+
+// 下面這些是一定要寫的
+// 從node_modules 引用 http-errors, express  etc. 的模組
+// 實際上在安裝express的時候，也會在?package.json 裡面會引用各種模組
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
