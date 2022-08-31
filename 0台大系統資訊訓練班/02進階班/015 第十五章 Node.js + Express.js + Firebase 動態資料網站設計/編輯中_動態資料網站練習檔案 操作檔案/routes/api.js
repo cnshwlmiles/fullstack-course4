@@ -3,7 +3,7 @@ const moment = require('moment');
 const axios = require('axios');
 const router = express.Router();
 // const admin = require('../firebase');
-// const db = require('../db');
+const db = require('../db');
 
 // 登入
 router.post('/login', function (req, res, next) {
@@ -77,6 +77,7 @@ router.get('/category-list', function (req, res, next) {
     // 回傳資料給前端
     res.status(200).json({
         categoryList: categoryList
+        // 前面是物件名稱, 名稱和常數一樣，可以只寫categoryList
     })
 });
 
@@ -85,23 +86,35 @@ router.post('/product/create', function (req, res, next) {
     console.log('[準備新增商品]');
     console.log('[前端送來的資料]', req.body);
     // Add a document
-    // https://firebase.google.com/docs/firestore/manage-data/add-data#add_a_document
+    // 閱讀文件： https://firebase.google.com/docs/firestore/manage-data/add-data#add_a_document
+    
+    // 後端(收到)的資料固定用req.body
+    // 前端是 res.data
     const product = req.body;
-    // db
-    //     .collection("productList")
-    //     .add(product)
-    //     .then(function (response) {
-    //         // 回應前端成功
-    //         res.status(200).json({
-    //             msg: "產品創建成功",
-    //             data: product,
-    //             response
-    //         });
-    //     })
-    //     .catch(function (error) {
-    //         // 回應前端失敗
-    //         res.status(500).json(error);
-    //     });
+
+    // Add a new document with a generated id.
+    // const res = await db.collection('cities').add({
+    // name: 'Tokyo',
+    // country: 'Japan'
+    // });  
+    // console.log('Added document with ID: ', res.id);index.js
+    db
+        .collection("productList")
+        // 將資料送到Firebase機房，如果成功就會收到response
+        .add(product)
+        .then(function (response) {
+            // 回應前端成功，用res.status(200)
+            res.status(200).json({
+                msg: `${product.name}-創建成功`,
+                data: product,
+                // response: response 的簡寫
+                response
+            });
+        })
+        .catch(function (error) {
+            // 回應前端失敗
+            res.status(500).json(error);
+        });
 });
 
 // 更新商品

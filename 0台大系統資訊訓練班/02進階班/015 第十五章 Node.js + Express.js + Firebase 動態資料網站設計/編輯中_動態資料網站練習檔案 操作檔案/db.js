@@ -1,6 +1,8 @@
 // 引用在firebase.js裡已經初始化的admin
 // FIRESTORE 文件
 // https://firebase.google.com/docs/firestore/quickstart
+
+// 取得 ./firebase.js 獲得的admin
 const admin = require('./firebase');
 
 // 初始化db

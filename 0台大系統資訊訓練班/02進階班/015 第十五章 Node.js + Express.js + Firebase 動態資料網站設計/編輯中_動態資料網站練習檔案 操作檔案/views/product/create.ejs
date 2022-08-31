@@ -29,6 +29,8 @@
                 </div>
                 <div class="form-group">
                     <label for="productCategory">商品分類</label>
+                    <!-- 引用後端資料庫(API資料夾)裡面的選項，通常這部分會由後端工程師設計好，給你一個路徑 -->
+                    <!-- 前後端使用axios套件溝通，很常見的前後端溝通函式庫 -->
                     <select id="productCategory" class="form-control">
 
                     </select>
@@ -39,28 +41,9 @@
             </form>
         </section>
         <% include ../shared/scripts %>
-            <script>
-                const $select = $("#productCategory");
-                // TODO: 取得商品分類清單
-                // PATH: "/api/category-list"
-
-                $('#createProductForm').submit(function (event) {
-                    event.preventDefault();
-                    const product = {
-                        name: $('#productName').val(),
-                        price: parseInt($('#productPrice').val()),
-                        image: $('#productImage').val(),
-                        category: $('#productCategory').val(),
-                        createdAt: new Date().getTime()
-                    };
-                    console.log('[新增產品]', product);
-                    // TODO: 創建商品API
-                    // PATH: "/api/product/create",
-                    // MATHOD: "POST",
-                    // DATA: product 新產品資料(物件)
-
-                });
-            </script>
+            <!-- 15.5 透過前端的JavaScript程式向後端的API發送請求取得資源 -->
+            <!-- 把script 外包到assets資料夾裡面 -->
+            <script src="/assets/js/create-page.js"></script>
 </body>
 
 </html>

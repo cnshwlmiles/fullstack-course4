@@ -19,3 +19,12 @@ Express.js 是在 node.js 下寫動態網站的常用框架
 
 15.3 一個動態資料網站頁面路由的顯示邏輯
 動態網站一定要重新整理才可以顯示更新，要重新下一次request，網站才會更新
+
+只有assets 資料夾下面的檔案是前端可以取得的，其他都是後端，不能取得的資料。
+
+15.7 創建Firebase專案
+Firebase 是Non-SQL常用的資料庫，不需要學SQL也可以會用
+如果要學習正規資料庫還是要學MySQL
+
+Firebase 是 google底下的服務
+Firebase Admin SDK 軟體開發包
