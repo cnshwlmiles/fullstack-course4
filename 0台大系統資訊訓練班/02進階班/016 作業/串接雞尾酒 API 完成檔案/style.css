@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    height: 200;
+}
+
+.text-big {
+    font-size: larger;
+}
