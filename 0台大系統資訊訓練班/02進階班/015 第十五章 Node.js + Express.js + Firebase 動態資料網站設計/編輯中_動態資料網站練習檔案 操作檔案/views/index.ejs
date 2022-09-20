@@ -18,9 +18,10 @@
     </header>
     <section class="py-3">
       <div class="container">
+        <!-- 15.9從雲端資料庫取得集合資料並透過EJS模板渲染 -->
         <h1>商品列表</h1>
         <div class="row">
-          <!-- forEach迴圈開頭 -->
+          <!-- forEach迴圈開頭 ，不斷產生相同的div-->
           <% productList.forEach(product=> { %>
             <div class="col-md-4">
               <div class="card">

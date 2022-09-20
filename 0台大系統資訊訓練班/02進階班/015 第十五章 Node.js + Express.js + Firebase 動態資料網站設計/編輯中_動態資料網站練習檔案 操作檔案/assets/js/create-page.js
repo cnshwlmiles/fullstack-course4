@@ -47,9 +47,14 @@ $('#createProductForm').submit(function (event) {
     // DATA: product 新產品資料(物件)
     
     // 前端跟後端溝通，網址打滿，此為api.js下面的路由
+    // 將前端的物件(product)送給後端
     axios.post('/api/product/create', product)
     .then(res => {
         console.log('成功建立產品', res);
+        // 跳出警示(商品名稱+創建成功)
+        alert(res.data.msg);
+        // 強制引導使用者回到首頁/ (首頁)
+        window.location = '/';
     })
     .catch(err =>{
         console.log('錯誤', err);

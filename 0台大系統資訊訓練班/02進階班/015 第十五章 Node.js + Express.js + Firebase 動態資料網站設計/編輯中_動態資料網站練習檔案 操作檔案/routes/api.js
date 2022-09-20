@@ -3,6 +3,7 @@ const moment = require('moment');
 const axios = require('axios');
 const router = express.Router();
 // const admin = require('../firebase');
+//引用db 
 const db = require('../db');
 
 // 登入
@@ -82,6 +83,7 @@ router.get('/category-list', function (req, res, next) {
 });
 
 // 新增商品
+// 15.8 將新商品的資料新增至Firebase Cloud Firestore雲端資料庫內
 router.post('/product/create', function (req, res, next) {
     console.log('[準備新增商品]');
     console.log('[前端送來的資料]', req.body);
@@ -99,12 +101,14 @@ router.post('/product/create', function (req, res, next) {
     // });  
     // console.log('Added document with ID: ', res.id);index.js
     db
+        // 指定要放進哪個collection裡面，firebase物件名稱
         .collection("productList")
-        // 將資料送到Firebase機房，如果成功就會收到response
+        // 將資料送到Firebase伺服器機房，如果成功就會收到response
         .add(product)
         .then(function (response) {
             // 回應前端成功，用res.status(200)
             res.status(200).json({
+                // 優化msg，加上產品名稱，待會就可以引導回到新增產品的頁面
                 msg: `${product.name}-創建成功`,
                 data: product,
                 // response: response 的簡寫

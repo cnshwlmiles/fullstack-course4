@@ -16,4 +16,5 @@ admin.initializeApp({
 
 
 // 輸出 admin 供其他檔案使用 (交給db.js使用)
+// 其他檔案就可以require('./firebase')
 module.exports = admin;
