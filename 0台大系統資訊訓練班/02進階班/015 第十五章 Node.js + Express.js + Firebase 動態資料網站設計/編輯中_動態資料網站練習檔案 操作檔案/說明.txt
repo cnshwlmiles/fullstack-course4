@@ -45,3 +45,13 @@ node.js 架構可以把不同功能分成好幾個檔案，再引用
 
 15.9 從雲端資料庫取得集合資料並透過EJS模板渲染
 取得後端資料庫的商品，並呈現在前端的列表
+
+15.10 查詢JS函數
+Google: mdn array find 
+
+find() 方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳 undefined。
+const array1 = [5, 12, 8, 130, 44];
+const found = array1.find(element => element > 10);
+
+console.log(found);
+// expected output: 12

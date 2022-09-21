@@ -2,7 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const db = require('../db'); 
+const db = require('../db');
+const categoryList = require('../model/category-list')
 
 // 首頁路由 
 // 15.9從雲端資料庫取得集合資料並透過EJS模板渲染
@@ -29,7 +30,21 @@ router.get('/', async function (req, res, next) {
     // console.log('文件ID', doc.id);
     // console.log('原始資料', doc.data());
     const product = doc.data();
-    product.id = doc.id //將資料庫的ID存給product
+    
+    
+    //將資料庫的ID存給product(物件.屬性 = 值);
+    product.id = doc.id 
+    
+    // 15.10 使共用資料獨立 透過find函數在陣列中尋找符合條件的資料
+    // 測試：印出產品的分類
+    
+    console.log('產品分類', product.category);
+    // console.log('商品分類對照表', categoryList);
+    const category = categoryList.find(a => a.id == product.category);
+    console.log('[對應的分類]', category);
+    // 將原本的數字類別，更換為文字類別
+    product.category = category.title;
+
     // console.log('product', product);
     // 將product 物件新增到productList裡面
     productList.push(product)

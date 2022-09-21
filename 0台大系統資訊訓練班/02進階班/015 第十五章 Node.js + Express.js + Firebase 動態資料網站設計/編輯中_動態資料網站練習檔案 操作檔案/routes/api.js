@@ -5,6 +5,8 @@ const router = express.Router();
 // const admin = require('../firebase');
 //引用db 
 const db = require('../db');
+// 15.10 使共用資料獨立 透過find函數在陣列中尋找符合條件的資料
+const categoryList = require('../model/category-list')
 
 // 登入
 router.post('/login', function (req, res, next) {
@@ -65,16 +67,7 @@ router.post('/logout', function (req, res, next) {
 
 // 取得商品分類清單
 router.get('/category-list', function (req, res, next) {
-    const categoryList = [
-        { id: "1", title: "食品" },
-        { id: "2", title: "電子產品" },
-        { id: "3", title: "書籍" },
-        { id: "4", title: "日用品" },
-        { id: "5", title: "清潔用品" },
-        { id: "6", title: "音響" },
-        { id: "7", title: "3C產品" },
-        { id: "8", title: "文具" },
-    ];
+    // 共用資料在model categorylist底下
     // 回傳資料給前端
     res.status(200).json({
         categoryList: categoryList
