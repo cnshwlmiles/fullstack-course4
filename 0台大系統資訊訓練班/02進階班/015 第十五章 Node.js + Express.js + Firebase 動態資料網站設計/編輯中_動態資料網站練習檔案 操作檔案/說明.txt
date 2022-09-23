@@ -38,6 +38,7 @@ Firebase Admin SDK 軟體開發包
 下載後，把它改名為key.json
 
 firebase db.js 是資料庫Js
+引用db才能用firebase喔
 
 node.js 架構可以把不同功能分成好幾個檔案，再引用
 
@@ -55,3 +56,22 @@ const found = array1.find(element => element > 10);
 
 console.log(found);
 // expected output: 12
+
+15.11 透過動態路由參數取得商品ID並顯示單一商品資料至編輯頁面中
+
+單一商品細節資料，是在product路由器底下
+
+15.12 在EJS模板中使用迴圈與判斷式渲染分類清單
+渲染有兩種策略
+
+一種像create-page.js一樣，透過呼叫API取得資料，
+透過JS渲染到畫面上。
+
+因為我們已經把categoryList獨立出來，放在model底下， 
+我們在路由層將categoryList抓出來，在頁面渲染之前，透過ejs的方式顯示在畫面上。
+
+
+15.13 將更新後的商品資料傳遞給後端API並更新資料
+一般會用PUT方法更新後端的資料
+
+15.14 透過文件ID移除指定文件資料

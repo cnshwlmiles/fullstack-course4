@@ -115,25 +115,27 @@ router.post('/product/create', function (req, res, next) {
 });
 
 // 更新商品
+// 15.13 將更新後的商品資料傳遞給後端API並更新資料(後端)
 router.put('/product/:pid', function (req, res, next) {
     console.log('[準備更新商品]');
     console.log('[前端送來的資料]', req.body);
     console.log('[pid]', req.params.pid);
     const pid = req.params.pid;
     const product = req.body;
-    // db
-    //     .doc(`productList/${pid}`)
-    //     .update(product)
-    //     .then(response => {
-    //         res.status(200).json({
-    //             msg: "產品更新成功",
-    //             data: product,
-    //             response
-    //         });
-    //     })
-    //     .catch(err => {
-    //         res.status(500).json(err);
-    //     });
+    // 透過db.doc更新(update)
+    db
+        .doc(`productList/${pid}`)
+        .update(product)
+        .then(response => {
+            res.status(200).json({
+                msg: "產品更新成功",
+                data: product,
+                response
+            });
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        });
 });
 
 // 刪除商品
