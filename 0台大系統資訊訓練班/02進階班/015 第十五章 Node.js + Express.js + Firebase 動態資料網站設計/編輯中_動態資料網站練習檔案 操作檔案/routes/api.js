@@ -143,19 +143,19 @@ router.delete('/product/:pid', function (req, res, next) {
     console.log('[準備刪除商品]');
     console.log('[pid]', req.params.pid);
     const pid = req.params.pid;
-    // db
-    //     .doc(`productList/${pid}`)
-    //     .delete()
-    //     .then(response => {
-    //         res.status(200).json({
-    //             msg: "產品移除成功",
-    //             data: pid,
-    //             response
-    //         });
-    //     })
-    //     .catch(err => {
-    //         res.status(500).json(err);
-    //     });
+    db
+        .doc(`productList/${pid}`)
+        .delete()
+        .then(response => {
+            res.status(200).json({
+                msg: "產品移除成功",
+                data: pid,
+                response
+            });
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;
