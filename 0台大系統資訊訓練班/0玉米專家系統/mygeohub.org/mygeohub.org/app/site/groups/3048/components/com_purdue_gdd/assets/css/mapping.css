@@ -1,0 +1,130 @@
+.ol-control.hidden {
+	display: none;
+}
+.ol-zoom {
+   top: 60px;
+   left: 10px;
+}
+
+.ol-control button.ol-zoom-out {
+	margin-top: 30px;
+
+}
+
+.ol-control button.ol-zoom-out,
+.ol-control button.ol-zoom-in {
+	background-color: rgba(0, 0, 0, 1.0);
+	background: rgba(0, 0, 0, 1.0);
+}
+
+.ol-zoom-extent {
+	top: 85px;
+	left: 10px;
+}
+
+.ol-zoom-extent button {
+	background-color: rgba(63, 63, 63, 0.8);
+	background: rgba(63, 63, 63, 0.8);
+	background-image: url("../img/dark/zoom-world-mini.png");
+	height: 19px;
+    width: 19px;
+}
+
+.ol-zoom-extent button:focus,
+.ol-zoom-extent button:hover {
+	background-color: rgba(23, 23, 23, 0.8);
+	background: rgba(23, 23, 23, 0.8);
+	background-image: url("../img/dark/zoom-world-mini.png");
+}
+
+
+.ol-geolocate {
+	top: 10px;
+	right: 10px;
+}
+
+.ol-geolocate button {
+	
+    height: 19px;
+    width: 19px;
+    background: rgba(0, 0, 0, 1) url("../img/geolocation_white.png") repeat scroll 0 0;
+}
+
+.ol-geolocate button:focus,
+.ol-geolocate button:hover {
+	background: rgba(0, 0, 0, 1) url("../img/geolocation_white.png") repeat scroll 0 0;
+}
+
+.ol-viewport .layer-switcher {
+	right: 10px;
+}
+
+.ol-viewport .layer-switcher button {
+	background: rgba(0, 0, 0, 1) url("../img/dark/layer-switcher-maximize.png") repeat scroll 0 0;
+	height: 18px;
+	width: 18px;
+}
+
+.ol-viewport .layer-switcher.shown button {
+	background: rgba(0, 0, 0, 1) url("../img/dark/layer-switcher-minimize.png") repeat scroll 0 0;
+}
+
+.ol-mouse-position {
+	bottom: 1.45em;
+	right: 0px;
+	top: inherit;
+	padding: 0 5px;
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+}
+.ol-popup {
+	position: absolute;
+	background-color: white;
+	-webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+	filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid #cccccc;
+	bottom: 12px;
+	left: -50px;
+	width: 150px;
+}
+.ol-popup:after, .ol-popup:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.ol-popup:after {
+	border-top-color: white;
+	border-width: 10px;
+	left: 48px;
+	margin-left: -10px;
+}
+.ol-popup:before {
+	border-top-color: #cccccc;
+	border-width: 11px;
+	left: 48px;
+	margin-left: -11px;
+}
+.ol-popup-closer {
+	text-decoration: none;
+	position: absolute;
+	top: 2px;
+	right: 8px;
+}
+.ol-popup-closer:after {
+	content: "âœ–";
+}
+#permalink {
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+    padding: 0 5px;
+    position: absolute;
+    left: 0;
+    top: inherit;
+    bottom: 0;
+    z-index: 10;
+    cursor: pointer;
+}
