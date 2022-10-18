@@ -10,6 +10,8 @@ Express.js 是在 node.js 下寫動態網站的常用框架
 15.00 
 api.js是放各種我們寫好的後端：存放資料到資料庫、取得資料庫的資料
 
+15.1 Express.js 是node.js 架設動態網站的框架
+
 15.2 透過npm安裝所需套件並使用nodemon啟動網站應用程式
 在這個資料夾裡面，只要Assets和views裡面的資料夾才是寫給前端用的
 其他都是後端邏輯(bin middleware app.js db.js...)

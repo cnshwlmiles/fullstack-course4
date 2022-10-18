@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>農業氣象觀測網監測系統</title>
+        <link rel="stylesheet" href="../packages/jquery-ui/1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../packages/jquery-range/1.0.0/jquery.range.css">
+<link rel="stylesheet" href="../packages/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="../packages/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../packages/bootstrap/3.3.5/custom.css">
+<link rel="stylesheet" href="../packages/font-awesome/4.4.0/css/font-awesome.css">
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../pages/agriculture_helper/gdd_calculation/gdd_calculation.css">
+<link rel="stylesheet" href="../css/footer.css">
+<script>global = window.global || {}; d = {"base_url":"https:\/\/agr.cwb.gov.tw\/NAGR\/","controller":"https:\/\/agr.cwb.gov.tw\/NAGR\/agriculture_helper\/gdd_calculation","url":"agriculture_helper\/gdd_calculation"};for(var k in d) {global[k]=d[k]};</script><script src="../packages/jquery/3.6.0/jquery.min.js"></script>
+<script src="../packages/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../packages/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+<script src="../packages/jquery-ui/1.12.1/i18n/datepicker-zh-TW.js"></script>
+<script src="../packages/jquery-ui/1.12.1/custom.js"></script>
+<script src="../js/fix_ie.js"></script>
+<script src="../js/lib.js"></script>
+<script src="../packages/jquery-range/1.0.0/jquery.range.js"></script>
+<script src="../packages/echart/5.3.3/echarts.min.js"></script>
+<script src="../packages/moment/2.22.2/min/moment-with-locales.js"></script>
+<script src="../packages/moment/2.22.2/custom.js"></script>
+<script src="../packages/bootstrap/3.3.5/custom.js"></script>
+<script src="../packages/spin-js/2.3.2/spin.min.js"></script>
+<script src="../packages/js-cookie/2.1.0/src/js.cookie.js"></script>
+<script src="../packages/jquery-dialog/2017-07-25/jquery.dialogextend.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../pages/agriculture_helper/gdd_calculation/gdd_calculation.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/footer.js"></script>
+    </head>
+    <body>
+        <div id="ajax_loading"></div>
+        <div class="header_bar hidden-xs hidden-sm">
+            <div class="header">
+                <a id="link" href="../monitor">農業氣象觀測網監測系統</a>
+                                    <a href="../account/login"><div type="button" class="btn btn-primary btn-md right size">登入/註冊</div></a>
+                                                <div style="height:60px;margin-top:-60px;">
+                    <img class="coacwb_logo" src=".../images/coacwb_logo.png">
+                </div>
+            </div>
+        </div>
+        <div class="header_bar_mobile hidden-md hidden-lg">
+            <a id="link-mobile" href="../monitor">農業氣象觀測網監測系統</a>
+        </div>
+        <div class="fade_img"></div>
+        <div class="nav_bar hidden-sm hidden-xs">
+            <div class="nav_btn">
+                <div id="urgent_report">
+                </div>
+                <div id="monitor" class="nav_block text-center">
+                    <a href="../monitor"><img src="../images/layout/icon1.png" width="30" height="30" class="nav_icon">防災即時監測</a>
+                </div>
+                <div id="observational" class="nav_block text-center">
+                    <a href="../observational"><img src="../images/layout/icon2.png" width="30" height="30" class="nav_icon">觀測時序圖</a>
+                </div>
+                <div id="cropstation_forecast" class="nav_block text-center dropdown"><a><img src="../images/layout/icon3.png" width="30" height="30" class="nav_icon">農業客製化預報<img src="../images/layout/caret-down-solid.svg" width="30" height="30" class="nav_icon"></a>
+                    <ul>
+                        <li class="nav_block text-center">
+                            <a href="../cropstation_forecast">專區精緻預報</a>
+                        </li>
+                        <li class="nav_block text-center">
+                            <a href="../sakura_forecast">櫻花花期預報</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="week_agri_forcast" class="nav_block text-center">
+                    <a href="https://www.cwb.gov.tw/V8/C/L/agriculture.html" target="_blank"><img src="../images/layout/week_agricultural_weather.png" width="25" height="25" class="nav_icon">一週農業氣象</a>
+                </div>
+                <div id="ten_days_observation" class="nav_block text-center">
+                    <a href="https://www.cwb.gov.tw/V8/C/L/agri_pdf.html" target="_blank"><img src="../images/layout/ten_days_report.png" width="30" height="30" class="nav_icon">旬報</a>
+                </div>
+                <div id="longterm_forcast" class="nav_block text-center">
+                    <a href="https://www.cwb.gov.tw/V8/C/W/long.html" target="_blank"><img src="../images/layout/longterm_forecast.png" width="30" height="30" class="nav_icon">長期預報</a>
+                </div>
+                <div id="history" class="nav_block text-center">
+                    <a href="../history/station_day"><img src="../images/layout/icon4.png" width="30" height="30" alt="" class="nav_icon">歷史資料下載</a>
+                </div>
+                <div id="agriculture_helper" class="nav_block text-center dropdown"><a><img src="../images/layout/icon5.png" width="30" height="30" class="nav_icon">農業小幫手<img src="../images/layout/caret-down-solid.svg" width="30" height="30" class="nav_icon"></a>
+   
+                    <ul>
+                        <li class="nav_block text-center">
+                            <a href="../agriculture_helper/gdd_calculation">積溫計算器</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar hidden-md hidden-lg">
+            <div class="container-fluid">
+                <div class="navbar-header-mobile">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-mobile" aria-expanded="false">
+                        <span class="sr-only">選單</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span>首頁/
+                        <span id="current-page-text"></span>
+                    </span>
+                    <div id="urgent_report_rwd" class="local-link"></div>
+                </div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="menu-mobile">
+                <ul class="nav navbar-nav">
+                    <li class="active local-link"><a href="../monitor">防災即時監測</a></li>
+                    <li class="local-link"><a href="../observational">觀測時序圖</a></li>
+                    <li class="dropdown"><a>農業客製化預報<img src="../images/layout/caret-down-solid.svg" width="20" height="20" class="nav_icon"></a></li>
+                    <ul class="submenu">
+                        <li><a href="../cropstation_forecast">專區精緻預報</a></li>
+                        <li><a href="../sakura_forecast">櫻花花期預報</a></li>
+                    </ul>
+                    <li><a href=https://www.cwb.gov.tw/V8/C/L/agriculture.html target="_blank">一週農業氣象</a></li>
+                    <li><a href="https://www.cwb.gov.tw/V8/C/L/agri_pdf.html" target="_blank">旬報</a></li>
+                    <li><a href="https://www.cwb.gov.tw/V8/C/W/long.html" target="_blank">長期預報</a></li>
+                    <li><a href="../monitor/monitor_map_mobile">雷達回波及衛星雲圖</a></li>
+                    <li><a href="../history/station_day">歷史資料下載</a></li>
+                    <li class="dropdown"><a>農業小幫手<img src="../images/layout/caret-down-solid.svg" width="20" height="20" class="nav_icon"></a></li>
+                    <ul class="submenu"><li><a href="../agriculture_helper/gdd_calculation/gdd_calculation_mobile">積溫計算器</a></li></ul>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="content">
+            
+<input id="page_name" value="observational" type="hidden">
+
+<div class="container-fluid">
+    <div class='row'>
+        <div class='col-md-4'>
+            <div class="mg">
+                <span class="state">選擇參考測站及預報位點</span>
+                <div class="row state area_config">
+                    <div class="col-md-6 col-xs-6">
+                        <div><select name="" id="city_choose"><option value="">選擇縣市</option></select></div>
+                        <div><select name="" id="station_choose" class="form_data" disabled="disabled"><option value="">測站選擇</option></select></div>
+                        <div class="information station_info">
+                            <div>測站資訊 :<div></div></div>
+                            <div>代碼 : <span></span></div>
+                            <div>地址 : <span></span></div>
+                            <div>海拔 : <span></span></div>
+                            <div>經緯度 : <span></span></div>
+                            <div>起訖時間 : <span></span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <div><select id="area_choose"><option disabled selected>選擇鄉鎮</option></select></div>
+                        <div><select name="" id="prediction_choose" class="form_data" disabled="disabled"><option value="">預報點選擇</option></select></div>
+                        <div class="information predict_info">
+                            <div>預報點資訊 : </div>
+                            <div>地址 : </div>
+                            <div>經緯度 : </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mg">
+                <span class="calculation">積溫計算設定</span>
+                <div class="row calculation area_config">
+                    <div>
+                        <label for="start_time">起始日期:</label>
+                        <input type="text" id='start_time' class="datetime form_data">
+                    </div>
+                    <div>
+                        <label for="type_choose">當年度推估方式 : </label>
+                        <select id="type_choose" class="disabled form_data" disabled="disabled">
+                            <option value="1">7天預報+近5年記錄平均</option>
+                            <option value="2">7天預報+近10年記錄平均</option>
+                            <option value="3">7天預報+去年紀錄</option>
+                            <option hidden></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="temperature">生育基礎溫度 : </label>
+                        <select name="" id="temperature" class="form_data">
+                            <option value="0">0&deg;C</option>
+                            <option value="1">1&deg;C</option>
+                            <option value="2">2&deg;C</option>
+                            <option value="3">3&deg;C</option>
+                            <option value="4">4&deg;C</option>
+                            <option value="5">5&deg;C</option>
+                            <option value="6">6&deg;C</option>
+                            <option value="7">7&deg;C</option>
+                            <option value="8">8&deg;C</option>
+                            <option value="9">9&deg;C</option>
+                            <option value="10">10&deg;C</option>
+                            <option value="11">11&deg;C</option>
+                            <option value="12">12&deg;C</option>
+                            <option value="13">13&deg;C</option>
+                            <option value="14">14&deg;C</option>
+                            <option value="15">15&deg;C</option>
+                            <option value="16">16&deg;C</option>
+                            <option value="17">17&deg;C</option>
+                            <option value="18">18&deg;C</option>
+                            <option value="19">19&deg;C</option>
+                            <option value="20">20&deg;C</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="temperature_type">積溫計算方式 : </label>
+                        <select id="temperature_type" class="form_data">
+                            <option value="A">(日最高溫+日最低溫)/2-基礎溫度</option>
+                            <option value="B">(日最高溫上限30+日最低溫下限10)/2-基礎溫度</option>
+                            <option value="C">均溫-基礎溫度</option>
+                        </select>
+                    </div>
+                    <div class="vertical_center">目標積溫 :<i class="fa fa-caret-left"></i> <input id="target_gdd" class="slider-input04 form_data" type="hidden" value="750"><!--<div class="slider" data-min="50" data-max="3500"><span id="slider_point"></span></div>--><i class="fa fa-caret-right"></i></div>
+                    <div>
+                        <input type="text" id="end_time" class="datetime form_data disabled" disabled="disabled" placeholder="請先填選起始日期">
+                    </div>
+                    <button id="Description_btn">計算說明及作物設定值建議<span>?</span></button>
+                </div>
+            </div>
+            <div class="row submit_btn"><button id="submit_btn">完成設定，開始計算</button></div>
+        </div>
+        <div class='col-md-8'>
+            <div class="draw_GDD" id="draw_GDD" style = "margin-left:-24px" ></div>
+            <div>
+                <div>
+                <span class="mgrg">所選測站 : <span class="station"></span></span>
+                <span class="mgrg">所選預報點 : <span class="prediction"></span></span>
+                <span class="mgrg mgl">生育基礎溫度 : <span class="temperature"></span> &deg;C</span>
+                </div>
+                <div>
+                <span class="mgrg">起始日期 : <span class="start_time"></span></span>
+                <span class="mgrg">目標積溫 : <span class="degree"></span> ( degree-day )</span>
+                </div>
+                <table id="GDD_table">
+                    <thead>
+                        <tr>
+                            <th>曲線類別</th>
+                            <th>目標到達日期</th>
+                            <th>目標積溫到達天數</th>
+                            <th>至到達日積溫</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>所選年度</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>所選前一年度</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>近5年平均</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>近10年平均</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>範圍</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="note"></div>
+            </div>
+        </div>
+    </div>
+    <div id="error-dialog" title="!">
+    </div>
+    <div id="suggest_dialog" title="計算說明及作物設定值建議">
+        <p></p>
+    </div>
+</div>
+        </div>
+        <div class="footer">
+    <footer id="footer">
+        <div class="container-fluid">
+            瀏覽器版本：建議使用 Google Chrome 47.0.2526、Firefox 40.0.3、Microsoft IE 10以上 <br>本網站參考時間：臺灣標準時間TST(GMT +08:00)
+            <br>中華民國交通部中央氣象局版權所有
+            <br>地址：100006臺北市中正區公園路64號&nbsp;&nbsp;&nbsp;電話：(02)2349-1000(代表號)&nbsp;&nbsp;&nbsp;服務時間上午08:30至下午05:30
+        </div>
+    </footer>
+</div>
+    </body>
+</html>

@@ -1,0 +1,286 @@
+.container-fluid{
+    font-weight: bold;
+}
+
+div.area_config{
+    padding: 1.5em;
+    border-radius: 20px;
+    margin-top: -1px;
+}
+
+.mg{
+    margin-top: 5%;
+}
+
+.mgl{
+    margin-left: 40px;
+}
+
+span.calculation, span.state{
+    margin-top: 5%;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 16px;
+}
+
+div.calculation, div.calculation select, span.calculation, div.calculation input{
+    border: 2px solid #449D03;
+}
+
+span.calculation{
+    background: #ADD09D;
+}
+
+div.calculation > div{
+    margin-bottom: 2%;
+}
+
+#Description_btn{
+    background: #C4C4C4;
+    border-radius: 5px;
+    border: 2px solid #a8a7a7; 
+    display: none; 
+}
+
+#Description_btn span{
+    font-size: 18px;
+    color: red;
+    padding: 3px;
+}
+
+div.state, span.state{
+    border: 2px solid #4D93D1;
+}
+
+div.state > div{
+    text-align: center;
+}
+
+div.state select{
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+div.state select#city_choose, div.state select#area_choose{
+    background: #4C93D2;
+    color: #fff;
+}
+
+div.state select#station_choose, div.state select#prediction_choose{
+    border: 2px solid #7DB0DE;
+}
+
+span.state{
+    background: #9FBFE5;
+}
+
+input#end_time{
+    display: none;
+}
+
+div.submit_btn{
+    text-align: center;
+    margin: 5% auto;
+}
+
+div.submit_btn button{
+    background: #A5A5A5;
+    width: 100%;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid #AAAAAA;
+    outline: none;
+}
+
+div.submit_btn button:hover{
+    background: #807d7d;
+}
+
+div.state select#city_choose, div.state select#area_choose, div.submit_btn button{
+    box-shadow: 0.5px 1px 5px #000;
+}
+
+.information{
+    background: #99BCE4;
+    border: 2px solid #72A8DB;
+    padding: 15px;
+    min-height: 260px;
+    border-radius: 30px;
+    text-align: left;
+    font-size: 15px;
+    display: none;
+    
+word-break:break-all;
+}
+
+.mgrg{
+    min-width: 15em;
+    display: inline-block;
+}
+
+#error-dialog{
+    letter-spacing: 2px;
+    font-weight: 900;
+    min-height: 40px !important;
+    display: none;
+}
+
+.ui-dialog-titlebar{
+    background: #5B9BD5;
+    font-weight: 900;
+    text-align: center;
+    padding: 0.2em 1em !important;
+}
+
+.ui-dialog-title{
+    width: 100% !important;
+    color: #FFF;
+    font-size: 18px;
+}
+
+#error-dialog p{
+    text-align: center;
+}
+
+/* range style */
+.slider-container{
+  display: inline-block;
+  margin-left: 3%;
+}
+.theme-green .back-bar .pointer {
+    border: 2px solid #449D03;
+    background-image: -moz-linear-gradient(top, #FFF, #FFF);
+    background-image: -o-linear-gradient(top, #FFF, #FFF);
+    background-image: linear-gradient(to bottom, #FFF, #FFF);
+}
+
+.theme-green .back-bar .selected-bar {
+    background-image: -moz-linear-gradient(top, #449D03, #449D03);
+    background-image: -o-linear-gradient(top, #449D03, #449D03);
+    background-image: -webkit-linear-gradient(top, #449D03,  #449D03);
+    background-image: linear-gradient(to bottom, #449D03, #449D03);
+  }
+
+.theme-green .back-bar .pointer-label, .theme-green .scale ins {
+    color: #000;
+}
+
+.draw_GDD {
+    height:24em;
+}
+
+.draw_GDD #init_show{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    flex-direction: column;
+}
+
+.draw_GDD #init_show div{
+    margin-top: 10px;
+}
+
+.require{
+    border: 2px solid red !important;
+}
+
+/* table style */
+#GDD_table td, #GDD_table th{
+    width: 18.8em;
+    height: 70px;
+    padding: 3px 15px;
+    border: 1.5px solid #FAF6EF;
+    font-size: 16px;
+}
+
+#GDD_table th{
+    background: #5B9BD5;
+    color: #fff;
+    border-bottom: 3px solid #FAF6EF;
+
+}
+
+#GDD_table tr:nth-child(odd){
+    background: #D2DEEF;
+}
+
+#GDD_table tr:nth-child(even){
+    background: #EAEFF7;
+}
+
+#note {
+    letter-spacing: 1.5px;
+    margin: 10px 15px;
+}
+
+#note span{
+    color: red;
+}
+
+.ui-datepicker {
+    z-index: 3 !important;
+}
+
+select, input{
+    padding: 2px 5px;
+}
+
+.disabled{
+    border: 2px solid grey !important;
+    cursor: not-allowed !important;
+}
+
+.fa-caret-right, .fa-caret-left {
+    font-size: 30px;
+    margin-left: 15px;
+    color: #449D03;
+    cursor: pointer;
+}
+
+.col-md-6{
+    padding: 5px;
+}
+
+.vertical_center{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px){
+    div.state select {
+        width: 130px;
+        margin-bottom: 10px;
+    }
+
+    #temperature_type {
+        width: 170px;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .information {
+        font-size: 13px;
+        min-height: 270px;
+    }
+
+    #GDD_table td, #GDD_table th {
+        padding: 3px 5px;
+        font-size: 14px;
+    }
+
+    .draw_GDD {
+        height:29em;
+    }
+    
+    .draw_GDD canvas {
+        margin-left: -10px !important;
+    }
+
+    .draw_GDD #init_show {
+        font-size: 1.5em;
+    }
+}

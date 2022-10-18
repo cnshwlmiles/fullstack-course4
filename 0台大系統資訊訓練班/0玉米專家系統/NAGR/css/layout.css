@@ -1,0 +1,379 @@
+body{
+    font-family: "Arial", "Verdana", "微軟正黑體", "新細明體";
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    line-height:1.5em;
+    overflow-x: hidden;
+}
+
+a,a:active,a:focus,a:hover{
+    text-decoration: none;
+}
+
+#link{
+    color: #ffffff;
+}
+
+
+
+.leaflet-marker-pane{
+    z-index: 400;
+}
+
+.coacwb_logo {
+    float: right;
+    width: 25%;
+    margin: auto;
+    display:block;
+    margin-top:-2vh;  
+    margin-right:15px;    
+}
+
+.header_bar{
+    width: 100%;
+    height: 60px;
+    background-color: #81b1da;
+    color: #fff;
+    font-size: 4vw;
+    font-weight: bold;
+    border-bottom: solid 2px #fff;
+}
+
+@media (min-width: 1440px) {
+    .header_bar{
+        font-size: 3vw;
+    }
+}
+
+.header_bar_mobile {
+    width: 100%;
+    background-color: #81b1da;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: solid 2px #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    
+}
+
+
+
+.header_bar_mobile a#link-mobile {
+    margin: 0 auto;
+    width: 60vw;
+    color: #fff;
+    font-size: 4vw;
+}
+
+
+.navbar-toggle {
+    float: left !important;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin: 0 -15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-fluid {
+        border-bottom: 1px solid #eeeeee;
+    }
+}
+
+.container-fluid > .navbar-collapse {
+    margin-right: 40%;
+}
+
+.header{
+    padding-top: 20px;
+}
+
+.right{
+    float: right;
+    margin-right: 12px;
+    margin-top: -14px;
+}
+
+.size{
+    font-size: 16px;
+}
+
+.nav_bar {
+    width: 100%;
+    height: 55px;
+    background-color: #88abda;
+    margin-top: 19vh;
+}
+
+@media (min-width: 992px) {
+    .nav_bar {
+        margin-top: 150px;
+    }
+}
+
+
+
+/*  手機版的navbar  */
+.navbar {
+    margin-top: 50px !important;
+    margin-top: 50px !important;
+}
+
+.navbar .navbar-nav>li>a {
+    background-color: #eee;
+    color: black;
+}
+
+.navbar .navbar-nav .submenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: none;
+}
+
+.navbar .navbar-nav .submenu li{
+    padding-top: 10px;
+    padding-left: 30px;
+    background-color: #cacaca;
+    color: black;
+}
+
+.navbar .navbar-nav .submenu li a{
+    color: black;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.navbar-nav>li.active {
+    background-color:#81b1da;
+}
+
+.navbar-toggle {
+    background-color: #1565C0 !important;
+}
+
+.navbar .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-header-mobile {
+    font-size:20px;
+    line-height: 55px;
+}
+
+.nav_btn{
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px #333;
+}
+
+.nav_btn ul{
+    position: absolute;
+    display: none;
+    background-color: #88abda;
+    width: 100%;
+    z-index: 1001;
+}
+
+.nav_btn ul:hover{
+    display: block;
+}
+
+.nav_btn ul a{
+    margin-left: -33px;
+    margin-bottom: 7px;
+}
+
+.nav_btn ul li:last-child{
+    border-bottom: none;
+}
+
+.nav_btn #cropstation_forecast:hover > ul{
+    display: block;
+}
+
+.nav_btn #agriculture_helper:hover > ul{
+    display: block;
+}
+
+.nav_btn li a{
+    cursor: pointer;
+}
+
+.nav_block{
+    margin: 0 5px;
+    display:inline-block;
+    padding-top: 15px;
+}
+
+.nav_block a {
+    color: #fff;
+    font-size: 1.1vw;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.nav_block a:link{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.nav_block a:hover{
+    border-bottom: 4px solid #003567;
+}
+
+.nav_block a:visited{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.dropdown a{
+    cursor: default;
+}
+
+.dropdown a:hover{
+    border-bottom: 0px;
+}
+
+.submenu a{
+    padding-bottom: 10px;
+}
+
+.dropdown ul li a{
+    border-bottom: 0px !important;
+}
+
+.dropdown ul:hover{
+    border-bottom: 4px solid #003567;
+}
+
+.warning a:hover{
+    text-decoration: none;
+}
+
+.warning a:visited{
+    text-decoration: none;
+}
+
+.ui-widget-header {
+    border: 1px solid #1762a2;
+    background: #1797d4;
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url(../packages/jquery-ui/1.12.1/images/ui-icons_222222_256x240.png);
+}
+
+
+.content{
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.login_content{
+    width: 60%;
+    margin: 0px auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.urgent{
+    font-family: "Arial", "Verdana", "微軟正黑體", "新細明體";
+    margin-bottom: 20px;
+    border-bottom: #aaafb3 solid 1px;
+}
+
+.urgent a{
+    font-size: 22px;
+    font-weight: bolder;
+    color: #d01a1a;
+}
+
+.urgent a:hover{
+    text-decoration: none;
+}
+
+.urgent a:visited{
+    text-decoration: none;
+}
+
+.more {
+    display: block;
+    float:right;
+    width: 60px;
+    height: 30px;
+    background-color: #7ecef4;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .more {
+        margin-top: 0px;
+        height: 25px;
+    }
+}
+
+.more a:link{
+    display: block;
+    float:right;
+    width: 60px;
+    height: 30px;
+    background-color: #7ecef4;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    .more a:link{
+        height: 25px;
+    }
+}
+
+
+.more a:hover{
+    display: block;
+    float:right;
+    width: 60px;
+    height: 30px;
+    background-color: #0068b7;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    .img_responsive{
+        width:100%;
+        height:150px;
+    }
+}
+
+@media (max-width: 991px) {
+    .img_responsive{
+        width:100%;
+        height:50px;
+    }
+}
+
+
+.nav_menu_active{
+    border-bottom: 4px solid #003567;
+}
+
+#urgent_report_rwd {
+    width:100%;
+    background: red;
+}

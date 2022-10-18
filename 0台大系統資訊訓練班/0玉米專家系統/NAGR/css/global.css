@@ -1,0 +1,269 @@
+/*header*/
+.navbar-default{
+    background-image: url("../images/header_bg.jpg");
+    background-size:cover;
+}
+
+/*left menu*/
+.leftnavbar-nav>li.active {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.navbar-default .navbar-brand{
+    height:75px;
+    font-size:32px;
+    line-height: 45px;
+    color:#FFF;
+    font-family: Microsoft JhengHei;
+    font-weight:bold;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #FFF;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a{
+    line-height: 45px;
+    font-size:18px;
+    color: #333;
+    background-color: #eee;
+    opacity:0.5;
+}
+
+.navbar-default .navbar-nav>li.active{
+    background-color: #6ca724;
+}
+
+.navbar-default .navbar-nav>li.active>a {
+    color: #000;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #3b6313;
+    background-color: #eee;
+    opacity:0.7;
+}
+/*end header*/
+
+.input-s {
+    /*display: block;*/
+    height: 34px;
+    margin: 6px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.text-right
+{
+    text-align: right !important;
+}
+
+.text-center
+{
+    text-align: center !important;
+}
+
+.text-left
+{
+    text-align: left !important;
+}
+
+.navbar-blue .navbar-brand {
+    color: #FFF;
+}
+
+.navbar-blue {
+    background-color: #326699;
+    border-color: #254f78;
+    color:#FFF;
+    padding-right: 20px;
+}
+
+.navbar-blue a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.navbar-blue .navbar-nav a:hover, .navbar-blue .navbar-nav a:focus {
+    color: #23527c;
+}
+
+.navbar-toggle {
+    border-color: #FFF !important;
+}
+
+.navbar-blue .navbar-nav li.active {
+    background-color: #eee;
+}
+
+.navbar-blue .navbar-nav li.active a {
+    color: #23527c;
+}
+
+.icon-bar {
+    background: white;
+}
+
+#main_content_row {
+    padding-top: 80px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+select {
+    height: 26px;
+    position: relative;
+}
+
+#ajax_loading {
+    display: none;
+}
+
+fieldset {
+    padding: 5px 15px;
+    border: 1px solid silver;
+    margin-bottom: 20px;
+}
+
+fieldset legend {
+    margin-bottom: 5px;
+    border-bottom: none;
+    width: auto;
+    padding: 0px 10px;
+}
+
+.notify-tip, .required-tip {
+    color: red;
+    display: inline;
+}
+
+.notify-star:before, .required-star:before {
+    content: "*";
+    color: red;
+}
+
+.navbar-logo {
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.leftnavbar-nav li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.nv-point{
+    stroke-opacity: 1 !important;
+    stroke-width: 5px !important;
+    fill-opacity: 1 !important;
+}
+
+#error_message{
+    font-size: large;
+    color: red;
+    font-weight: 700;
+}
+
+.nvd3 text{
+    font-size: 14px;
+    font-family: "Arial", "Verdana", "微軟正黑體", "新細明體";
+}
+
+.nvd3 .nv-legend .nv-series{
+    cursor: default !important;
+}
+
+.leaflet-shadow-pane {
+    z-index: 400;
+}
+
+.title_div{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 5px;
+    font-size: 25px;
+    color:#056cc7;
+    text-shadow: 1px 1px 1px #8ed2f2;
+    border-bottom: 1px solid #211dcb;
+    margin-bottom: 15px;
+}
+
+/*jtable*/
+.jtable-input-label{
+    float: left;
+    margin: 4px;
+    width:75px;
+    line-height: initial;
+    text-align: right;
+    padding-top: 4px;
+}
+
+.jtable-input.jtable-textarea-input{
+    float:left;
+}
+
+.jtable-text-input{
+    float: left;
+}
+
+.jtable-input-field-container{
+    height: 35px;
+}
+
+button.ui-button,.jtable-input-label,.ui-widget input,.ui-dialog-title,.jtable-delete-confirm-message,div.jtable-main-container{
+    font-family: "Arial", "Verdana", "微軟正黑體", "新細明體";
+}
+
+form.jtable-dialog-form div.jtable-input-label,.jtable-data-row,.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button,div.jtable-main-container{
+    font-size: 15px;
+}
+
+div.jtable-main-container table.jtable tbody>tr>td{
+    border-bottom: 1px dotted #bebebe;
+}
+
+/*datetimepicker*/
+#ui-datepicker-div{
+    font-family: "Arial", "Verdana", "微軟正黑體", "新細明體" !important;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    color:black;
+    font-family: "Arial", "Verdana", "微軟正黑體", "新細明體" !important;
+}
+
+/*content title*/
+.content_title{
+    border-bottom: #0068b7 solid 1px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.block_png {
+    width: 70px;
+    height: 55px;
+}
+
+#ajax_loading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2000;
+}
