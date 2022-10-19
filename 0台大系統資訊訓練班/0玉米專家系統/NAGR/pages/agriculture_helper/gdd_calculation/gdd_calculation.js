@@ -134,7 +134,7 @@ $(document).ready(function () {
         data_list = get_form_data();
         $.ajax({
             type: "POST",
-            url: global.controller + "/get_draw_data",
+            url: global.controller + "/get_draw_data.json",
             data: data_list,
             dataType: "JSON",
             success: function (data_response) {
@@ -493,7 +493,7 @@ $(document).ready(function () {
     function get_city_list() {
         $.ajax({
             type: "GET",
-            url: global.controller + "/get_city_list",
+            url: global.controller + "/get_city_list.json",
             dataType: "JSON",
             success: function (data_response) {
                 city_list = data_response;
@@ -507,7 +507,7 @@ $(document).ready(function () {
     function get_station_list() {
         $.ajax({
             type: "GET",
-            url: global.controller + "/get_station_list",
+            url: global.controller + "/get_station_list.json",
             dataType: "JSON",
             success: function (data_response) {
                 station_list = data_response;
@@ -532,7 +532,7 @@ $(document).ready(function () {
     function get_predict_list() {
         $.ajax({
             type: "GET",
-            url: global.controller + "/get_predict_list",
+            url: global.controller + "/get_predict_list.json",
             dataType: "JSON",
             success: function (data_response) {
                 predict_list = data_response;    
