@@ -4,8 +4,9 @@ data2 = {}
 const btn = document.getElementById("btn");
 const reportBlock = document.getElementById("reportBlock");
 
-// IPINFO API URL
-const url = "https://ipinfo.io/json?token=9828da42eb0f24";
+//  API URL
+let url = "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-027?Authorization=CWB-78F41008-5B1E-45F7-AF10-7BFEFF40B98E&locationName=%E8%99%8E%E5%B0%BE%E9%8E%AE&elementName=MinT,MaxT";
+const key = 'CWB-78F41008-5B1E-45F7-AF10-7BFEFF40B98E'
 
 // 綁定按鈕的點擊事件
 btn.addEventListener("click", function () {

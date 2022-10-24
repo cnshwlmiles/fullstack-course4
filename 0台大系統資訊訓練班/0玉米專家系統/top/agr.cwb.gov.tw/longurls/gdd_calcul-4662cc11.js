@@ -4,7 +4,6 @@ $(document).ready(function () {
     var station_list = {};
     var predict_list = {};
     var this_year = false;
-    // 畫圖的資料
     var draw_data = "";
     var form_data = {};
     var now = new Date();
@@ -144,6 +143,9 @@ $(document).ready(function () {
                 search_gdd_target(draw_data);
                 arrange_table(draw_data);
                 draw_gdd(draw_data);
+                console.log('draw_data', draw_data)
+                console.log('data_response', data_response)
+                console.log('data_list', data_list)
             },
             error: function (data_response) { 
                 $("#error-dialog").html("<p>"+ document.createTextNode(data_response.responseJSON[0]).wholeText +"</p>");
@@ -153,15 +155,12 @@ $(document).ready(function () {
         });
     });
 
-    // 主要的畫圖函式(???)
     function redraw(){
         $(".degree").text($(".slider-input04").val());
         arrange_table(draw_data);
         search_gdd_target(draw_data);
         draw_gdd(draw_data);
     }
-
-    // 設定的gdd_target，畫出目標GDD那條線
     function search_gdd_target(draw_data) {
         var gdd_target = $("#target_gdd").val();
         var target = moment(form_data["end_time"]).valueOf();
@@ -172,7 +171,6 @@ $(document).ready(function () {
              }
         });
         
-        // 劃出目標積溫的那條線
         draw_data['series'][0]["markLine"] = {
             symbol: 'none',
             silent: false,
@@ -373,8 +371,7 @@ $(document).ready(function () {
                     }
                     return false;
                 }
-            });
-            console.log(date_data)  
+            });      
         });
         if(this_year) {
             note.push(moment(start_time).format("YYYY") + "積溫資料+" + form_data["type"]);
@@ -499,7 +496,7 @@ $(document).ready(function () {
     function get_city_list() {
         $.ajax({
             type: "GET",
-            url: global.controller + "/get_city_list.json",
+            url: global.controller + "/get_city_list",
             dataType: "JSON",
             success: function (data_response) {
                 city_list = data_response;
@@ -513,7 +510,7 @@ $(document).ready(function () {
     function get_station_list() {
         $.ajax({
             type: "GET",
-            url: global.controller + "/get_station_list.json",
+            url: global.controller + "/get_station_list",
             dataType: "JSON",
             success: function (data_response) {
                 station_list = data_response;
@@ -538,7 +535,7 @@ $(document).ready(function () {
     function get_predict_list() {
         $.ajax({
             type: "GET",
-            url: global.controller + "/get_predict_list.json",
+            url: global.controller + "/get_predict_list",
             dataType: "JSON",
             success: function (data_response) {
                 predict_list = data_response;    
@@ -593,6 +590,9 @@ $(document).ready(function () {
         });
         data_list["prediction_type"] = $("#prediction_choose option:selected").data("type");
         data_list["type"] = $("#type_choose option:selected").text();
+        console.log(data_list);
         return data_list;
     }
 });
+
+console.log('hi this is Me testing')

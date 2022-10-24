@@ -1,0 +1,12 @@
+{
+    "station_choose": "467080",
+    "prediction_choose": "10002010",
+    "start_time": "2022-01-01 00:00:00",
+    "type_choose": "1",
+    "temperature": "0",
+    "temperature_type": "A",
+    "target_gdd": "750",
+    "end_time": "2022-12-31 00:00:00",
+    "prediction_type": "鄉鎮預報",
+    "type": "7天預報+近5年記錄平均"
+}
