@@ -1,0 +1,28 @@
+//gdd_calc.js 取得溫度資料 不能用
+
+// const tempData = require('./虎尾_2016_2021.json');
+// console.log(tempData)
+
+// /gdd_calculation/虎尾_2016_2021.json
+// $.getJSON("../images/map.png", function(json) {
+//     console.log(json); // this will show the info it in firebug console
+// });
+
+// console.log('t'); 
+// function get_temp_data() {
+//     $.ajax({
+//         type: "GET",
+//         url:  global.controller + '/虎尾_2016_2021.json',
+//         dataType: "JSON",
+//         success: function (data_response) {
+//             temp_list = data_response;
+//             console.log(temp_list);
+//             // $.each(data_response, function (city_name, area) { 
+//             //      $("#city_choose").append("<option>" + city_name + "</option>");
+//             // });           
+//         },
+//         error:function(){
+//             alert('請求失敗')
+//         }
+//     });
+// }

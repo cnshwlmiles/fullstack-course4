@@ -1,0 +1,123 @@
+<!-- 15.11 透過動態路由參數取得商品ID並顯示單一商品資料至編輯頁面中 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../shared/head %>
+</head>
+
+<body>
+    <% include ../shared/navbar %>
+        <header id="editHeader" class="jumbotron header">
+            <div class="container">
+                <h1>更新商品</h1>
+            </div>
+        </header>
+        <section class="py-3">
+            <form id="editProductForm" class="container">
+                <div class="form-group">
+                    <label for="productName">商品名稱</label>
+                    <input value="<%= product.name %>" type="text" id="productName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">商品價格</label>
+                    <input value="<%= product.price %>" type="number" id="productPrice" class="form-control" min="1"
+                        max="20000" required>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">商品圖片</label>
+                    <input value="<%= product.image %>" type="text" id="productImage" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">商品分類</label>
+                    <select id="productCategory" class="form-control">
+                        <!-- 15.12在EJS模板中使用迴圈與判斷式渲染分類清單 -->
+                        <!-- 都要用大括號包住 -->
+                        <!-- =等號代表要把內容渲染到畫面上 , 要加selected才可以選起來-->
+                        <% categoryList.forEach( c=> { %>
+                            <!-- 如果屬性相等的話，加上selected -->
+                            <%if (product.category==c.id) {%>
+                                <option value="<%= c.id %>" selected>
+                                    <%= c.title %>
+                                </option>
+                                <%}else{%>
+                                    <option value="<%= c.id %>">
+                                        <%= c.title %>
+                                    </option>
+                                    <%} %>
+                                        <% }) %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> 更新商品</button>
+                    <button id="deleteProductBtn" type="button" class="btn btn-danger"><i class="fas fa-trash"></i>
+                        刪除商品</button>
+                </div>
+            </form>
+        </section>
+        <% include ../shared/scripts %>
+            <script>
+                const $select = $("#productCategory");
+                // 要加等號
+                const pid = '<%= pid %>';
+                // 可以在網站重新整理，檢視原始碼，看看有沒有捕捉到pid
+
+                // 更新商品表單送出時 (捕捉使用者送出的更新內容)
+                $('#editProductForm').submit(function (event) {
+                    event.preventDefault();
+                    const product = {
+                        name: $('#productName').val(),
+                        price: parseInt($('#productPrice').val()),
+                        image: $('#productImage').val(),
+                        category: $('#productCategory').val(),
+                    }
+                    console.log('[更新產品]', product);
+                    // TODO: 更新商品API
+                    // PATH: `/api/product/${pid}`,
+                    // MATHOD: "PUT",
+                    // DATA: product 更新後的商品資料(物件)
+                    // (上面的說明當作後端工程師給的文件)一般會用PUT方法更新
+                    // 現在這個前端沒有ID可以用，但是在路由上(product.js)有，所以把他送到前端去
+
+                    // 把更新的商品送給後端
+                    axios.put(`/api/product/${pid}`, product)
+                        .then(res => {
+                            alert('已成功更新商品');
+                            window.location = '/';
+                        })
+                        .catch(err => {
+                            console.log('err', err);
+                            alert('發生錯誤，請稍後再試');
+                        })
+                    // 然後要去後端編輯怎麼回應
+
+                });
+
+                // 刪除商品按鈕按下時
+                $('#deleteProductBtn').click(function () {
+                    alert("確定要刪除商品？")
+                    console.log('[刪除商品]');
+                    // 15.14 透過文件ID移除指定文件資料
+                    // TODO: 刪除商品API
+                    // PATH: `/api/product/${pid}`,
+                    // MATHOD: "DELETE",
+                    // DATA: {}
+
+                    // 只需要知道要刪除的pid就可以囉
+                    // 用delete方法送給api??
+                    axios.delete(`/api/product/${pid}`)
+                        .then(res => {
+                            alert("<%= product.name %>已被移除");
+                            window.location = '/';
+                        })
+                        .catch(err => {
+                            console.log(err);
+                            alert("發生錯誤，請稍後再試")
+                        })
+                    // 接下來還要完成API相關流程，前往api.js
+
+                });
+            </script>
+</body>
+
+</html>

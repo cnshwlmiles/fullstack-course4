@@ -1,0 +1,79 @@
+Express.js 是在 node.js 下寫動態網站的常用框架
+
+動態網站就是伺服器傳給你HTML，靜態網站是造訪很多靜態的index.html等等
+
+靜態的缺點是如果你有網址，就可以進去，就算是管理者檔案也可以進去。
+動態資料網站可以使用路由邏輯，判斷要給使用者什麼資料。
+
+後端：可以驗證資料或撈取資料
+
+15.00 
+api.js是放各種我們寫好的後端：存放資料到資料庫、取得資料庫的資料
+
+15.1 Express.js 是node.js 架設動態網站的框架
+
+15.2 透過npm安裝所需套件並使用nodemon啟動網站應用程式
+在這個資料夾裡面，只要Assets和views裡面的資料夾才是寫給前端用的
+其他都是後端邏輯(bin middleware app.js db.js...)
+
+在pacakge.json 在終端機按 npm -i (安裝檔案就可以把所有的package都裝好)
+而且會產生一個新的node_modules 資料夾
+
+然後在終端機輸入 nodemon 就可以看到動態網站了
+要正確關掉網站，要和ctrl + c，否則會在背景消耗資源
+
+15.3 一個動態資料網站頁面路由的顯示邏輯
+動態網站一定要重新整理才可以顯示更新，要重新下一次request，網站才會更新
+
+只有assets 資料夾下面的檔案是前端可以取得的，其他都是後端，不能取得的資料。
+
+15.7 創建Firebase專案
+Firebase 是Non-SQL常用的資料庫，不需要學SQL也可以會用
+如果要學習正規資料庫還是要學MySQL
+
+Firebase 是 google底下的服務
+Firebase Admin SDK 軟體開發包
+(引用寫好的code)
+
+15.8 將新商品的資料新增至Firebase Cloud Firestore雲端資料庫內
+在專案設定、服務帳戶裡面產生金鑰
+下載後，把它改名為key.json
+
+firebase db.js 是資料庫Js
+引用db才能用firebase喔
+
+node.js 架構可以把不同功能分成好幾個檔案，再引用
+
+沒有建立路由的頁面，也無法透過前端去拜訪，因此可以保留資料。
+
+15.9 從雲端資料庫取得集合資料並透過EJS模板渲染
+取得後端資料庫的商品，並呈現在前端的列表
+
+15.10 查詢JS函數
+Google: mdn array find 
+
+find() 方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳 undefined。
+const array1 = [5, 12, 8, 130, 44];
+const found = array1.find(element => element > 10);
+
+console.log(found);
+// expected output: 12
+
+15.11 透過動態路由參數取得商品ID並顯示單一商品資料至編輯頁面中
+
+單一商品細節資料，是在product路由器底下
+
+15.12 在EJS模板中使用迴圈與判斷式渲染分類清單
+渲染有兩種策略
+
+一種像create-page.js一樣，透過呼叫API取得資料，
+透過JS渲染到畫面上。
+
+因為我們已經把categoryList獨立出來，放在model底下， 
+我們在路由層將categoryList抓出來，在頁面渲染之前，透過ejs的方式顯示在畫面上。
+
+
+15.13 將更新後的商品資料傳遞給後端API並更新資料
+一般會用PUT方法更新後端的資料
+
+15.14 透過文件ID移除指定文件資料
