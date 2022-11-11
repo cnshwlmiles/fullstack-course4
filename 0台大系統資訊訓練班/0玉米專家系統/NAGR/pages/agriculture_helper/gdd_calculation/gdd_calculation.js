@@ -120,6 +120,7 @@ $(document).ready(function () {
         $(".predict_info").slideDown("slow");
     });
 
+    // 提交按鈕後的動作 
     $(document).on("click", "button#submit_btn", function() {
         if(check_value()) {
             return false;
