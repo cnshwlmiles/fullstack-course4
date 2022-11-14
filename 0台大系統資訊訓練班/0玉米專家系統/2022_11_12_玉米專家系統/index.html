@@ -1,0 +1,104 @@
+<!-- 部屬前要改變CNAME -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 玉米專家系統</title>
+    <link rel="shortcut icon" href="./images/corn.ico" type="image/x-icon">
+    <!-- Bootstrap官方網站 https://getbootstrap.com/ -->
+    <!-- 引用Bootstrap.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <!-- 使用Boostrap Navbar -->
+    <!-- TODO: 設定Navbar緊貼畫面上緣 -->
+    <!-- TODO: 點擊滾動目標 -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">索引</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#introSection">登入或註冊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#featuresSection">輸入資料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviewsSection">結果</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    
+    
+    <!-- header -->
+    <header class="jumbotron text-center text-white bg-dark">
+        <div class="container"></div>
+    </header>
+    <!-- header end -->
+
+    <!-- section -->
+    <section>
+        <!-- container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 jumbotron text-center bg-dark text-white">
+                    <h1 class="text-warning">歡迎來到玉米專家系統</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <a class="btn btn-primary" href="#">登入</a>
+                    <a class="btn btn-outline-success" href="#">註冊</a>
+                </div>
+
+                <div class="form-box col-md-6 pl-5">
+                    <div class="form-header">
+                        <h1 class="form-header-title">登入</h1>
+                    </div>
+                    <form class="form-body" action="input.html">
+                        <div class="form-group">
+                            <label for="email">Email或手機號碼</label>
+                            <input name="Email" id="email" type="text" class="form-control"
+                                placeholder="請輸入您的Email或手機號碼">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">密碼</label>
+                            <input name="姓名" id="username" type="text" class="form-control" placeholder="請輸入您的密碼">
+                        </div>
+                        <div class="form-group"><a href="">忘記密碼？</a> <a href="">使用訪客模式登入</a></div>
+                        <div class="form-group">
+                            <button class="submit-btn" type="submit">登入</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
